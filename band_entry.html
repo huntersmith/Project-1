@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Add Your Band</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="contents">
+  <h1>Add Your Band</h1>
+
+    <form enctype="multipart/form-data" method="post" action="test_band.php">
+    <label for="band_name">Band name:</label>
+    <input type="text" id="band_name" name="band_name" /><br />
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" /><br />
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" /><br />
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" name="genre" /><br />
+    <label for="members">Band Members:</label>
+    <input type="text" id="members" name="members" /><br />
+    <label for="record_label">Record Label:</label>
+    <input type="text" id="record_label" name="record_label" /><br/>
+    <label for="bio">Band Bio:</label>
+    <textarea id="bio" name="bio"></textarea><br />
+    <label for="picture">Select a Picture file:</label>
+    <input type="file" id="picture" name="picture"  /><br />
+    
+
+    <input type="submit" value="Add Band" name="submit" />
+  </form>
+  </div>
+</body>
+</html>
