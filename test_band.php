@@ -12,13 +12,18 @@
 
 <?php
 
-  $band_name = $_POST['band_name'];
+  $name = $_POST['name'];
+  $street_address = $_POST['street_address'];
   $city = $_POST['city'];
   $state = $_POST['state'];
-  $genre = $_POST['genre'];
-  $members = $_POST['members'];
-  $record_label = $_POST['record_label'];
-  $bio = $_POST['bio'];  
+  $image = $_POST['image'];
+  $description = $_POST['description'];
+  $about = $_POST['about'];
+  $shows = $_POST['shows'];
+  $albums = $_POST['albums'];
+  $band_members = $_POST['band_members'];
+  $map = $_POST['map'];
+  $band = $_POST['band'];  
 
 
 
@@ -28,7 +33,7 @@
 
      move_uploaded_file($_FILES['picture']['tmp_name'], $target);   
 
-  $query = "INSERT INTO band_info (band_name, city, state, genre, band_members, record_label, bio, band_pic) VALUES ('$band_name', '$city', '$state', '$genre', '$members', '$record_label', '$bio', '$target')";
+  $query = "INSERT INTO band_info (name, stree_address,  city, state, image, description, about, shows, albums,  band_members, map, band) VALUES ('$name', '$city', '$state', '$target', '$description', '$about', '$shows', '$albums', '$band_members', '$map', '$band')";
   
 
   $result = mysqli_query($db, $query)
