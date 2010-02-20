@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<?php include "db_connect1.php" ?>
+<?php include "db_connect.php" ?>
 <div id="contents">
 
 <?php
