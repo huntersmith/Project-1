@@ -47,23 +47,24 @@ $query = "SELECT * FROM band_info WHERE band_name = '$band_name'";
 
 
   while($row = mysqli_fetch_array($result)) {
-  	$band_name = $row['band_name'];
-  	$city = $row['city'];
+  	$name = $row['name'];
+  	$street_address = $row['street_address'];
+	$city = $row['city'];
   	$state = $row['state'];
-  	$genre = $row['genre'];
+  	$description = $row['description'];
   	$members = $row['band_members'];
-      $record_label = $row['record_label'];
-      $bio = $row['bio'];
-      $pic = $row['band_pic'];
+      	$albums = $row['albums'];
+      	$about = $row['about'];
+      	$image = $row['image'];
   }
 
   	echo "<h1>$band_name</h1>";
-      echo "<p>$city " . ", " . "$state</p>";
-      echo "<p>$genre</p>";
+      echo "<p>$street_address $city " . ", " . "$state</p>";
+      echo "<p>$description</p>";
       echo "<p>Members: $members</p>";
-	echo "<p>Record Label: $record_label</p>";
-	echo "<p>Bio: $bio</p></div>";
-      echo "<img src =\"$pic\" />\n";
+	echo "<p>Albums: $albums</p>";
+	echo "<p>Bio: $about</p></div>";
+      echo "<img src =\"$image\" />\n";
   
   mysqli_close($db);
 
