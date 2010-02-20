@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS `bandInfo` (
 	city varchar(25) NOT NULL,
 	state varchar(2) NOT NULL,
 	image varchar(25) NOT NULL,
-        genre varchar (50),
 	description varchar(100) NOT NULL,
 	about blob,
 	shows varchar(25) NOT NULL,
