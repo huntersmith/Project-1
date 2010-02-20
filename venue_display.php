@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <?php
-	include "db_connect_personal.php";
+	include "db_connect.php";
 	
 	$venue = $_POST['venue_searchbox'];
 	$query = "SELECT * FROM $table WHERE name LIKE '%$venue%';";
