@@ -27,7 +27,7 @@
 
 
 
-     $filename = $_FILES['picture']['name'];
+     $filename = $_FILES['image']['name'];
      
      $target ="$filename";
 
