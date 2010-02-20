@@ -1,5 +1,5 @@
 <?php
-	$db = mysqli_connect('localhost', 'admin', 'band', 'test_band_website_db')
+	$db = mysqli_connect('localhost', 'banduser', 'bands', 'bands')
 	or die ("ERROR: connecting to mysql server!");
 	
 ?>
