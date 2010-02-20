@@ -6,7 +6,7 @@
 	
 	$venue = $_POST['venue_searchbox'];
 	$query = "SELECT * FROM $table WHERE name LIKE '%$venue%';";
-//    echo "$query";
+    echo "$query";
     $result = mysqli_query($db, $query)
 		or die("Error Querying Database");
 
