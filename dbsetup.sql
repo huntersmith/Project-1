@@ -27,3 +27,8 @@ TRUNCATE TABLE bandInfo;
 --
 -- Dumping data for table `abduction_reports`
 --
+INSERT INTO `bandinfo` (`id`, `name`, `street_address`, `city`, `state`, `image`, `description`, `about`, `shows`, `albums`, `band_members`, `map`, `band`) VALUES
+(1, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', '', 'Country, Blue Grass', NULL, 'No upcoming shows', 'First Album, Second Album', 'Bob, Jane, Sue, Alex', NULL, 1),
+(2, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', '', 'Pop, Rock', NULL, 'No upcoming shows', 'One, Two, Three', 'Jeff, Julie, Jordan', NULL, 1),
+(3, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', '', 'Really great music', NULL, 'No upcoming shows', '', '', NULL, 0),
+(4, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', '', 'Our music is OK', NULL, 'No upcoming shows', '', '', NULL, 0);
