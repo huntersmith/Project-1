@@ -33,7 +33,7 @@
 
      move_uploaded_file($_FILES['picture']['tmp_name'], $target);   
 
-  $query = "INSERT INTO $table (name, stree_address,  city, state, image, description, about, shows, albums,  band_members, map, band) VALUES ('$name', '$city', '$state', '$target', '$description', '$about', '$shows', '$albums', '$band_members', '$map', '$band')";
+  $query = "INSERT INTO $table (name, street_address,  city, state, image, description, about, shows, albums,  band_members, map, band) VALUES ('$name', '$street_address', '$city', '$state', '$target', '$description', '$about', '$shows', '$albums', '$band_members', '$map', '$band')";
   
 
   $result = mysqli_query($db, $query)
