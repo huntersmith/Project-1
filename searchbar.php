@@ -20,7 +20,7 @@
 	<tr bgcolor="white"><td align="center">
 		<font size="2" color="black"><b>Enter a club name or zip code to search:</b></font>
 		<form action="venue_display.php" method="post">
-		<input type="text"><input name="searchclub" type="submit" value="Search">
+		<input type="text"><input name="venue_searchbox" type="submit" value="Search">
 		</form>
 	</td></tr>
 	</table>
