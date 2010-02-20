@@ -28,13 +28,13 @@ while($row = mysqli_fetch_array($result)) {
 		$street_address = $row['street_address'];
 		$city = $row['city'];
 		$state = $row['state'];
-		$pic = $row['image'];
+		//$pic = $row['image'];
 		$about = $row['about'];
 		//$map = $row['map'];
 		
 		echo "
 	<h1>$venue</h1>
-	<img src='$pic' alt='$venue'/>
+	<!--<img src='$pic' alt='$venue'/>-->
 	<p>Location: <br/>$street_address <br/> $city, $state </p>
 	<p> $about </p>
 	";
