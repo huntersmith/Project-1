@@ -9,22 +9,10 @@
     echo "$query";
     $result = mysqli_query($db, $query)
 		or die("Error Querying Database");
-   
-    while($row = mysqli_fetch_array($result)) {
-		$venue = $row['name'];
-		$street_address = $row['street_address'];
-		$city = $row['city'];
-		$state = $row['state'];
-		$pic = $row['image'];
-		$about = $row['about'];
-		//$map = $row['map'];
-    }
+
 ?>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>
-		<?php $venue ?>
-	</title>
   <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
 </head>
 <script type="text/javascript" src="calendarDateInput.js" />
@@ -34,12 +22,25 @@
     <!--<?php include("header.html"); ?>-->
 	<div id="main">
 <?php
-	echo "
+
+while($row = mysqli_fetch_array($result)) {
+		$venue = $row['name'];
+		$street_address = $row['street_address'];
+		$city = $row['city'];
+		$state = $row['state'];
+		$pic = $row['image'];
+		$about = $row['about'];
+		//$map = $row['map'];
+		
+		echo "
 	<h1>$venue</h1>
 	<img src='$pic' alt='$venue'/>
 	<p>Location: <br/>$street_address <br/> $city, $state </p>
 	<p> $about </p>
 	";
+	//<p> <a href=$map>Link to map</a> <p>
+    }
+
 	//<p> <a href=$map>Link to map</a> <p>
 	
     //include("sidebar.php"); ?>
