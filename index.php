@@ -29,7 +29,7 @@ function hoveroff(cell) {
 	<table border="1" bordercolor="white" cellpadding="3" cellspacing="5" width="100%">
 	<tr bgcolor="<?php echo($cellbg); ?>"><td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Home</td>
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Bands</td>
-	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "band_entry">Add Your Band</a></td>
+	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "band_entry.html">Add Your Band</a></td>
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Link...</td>
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Link...</td></tr>
 	</table>
