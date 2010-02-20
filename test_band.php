@@ -31,7 +31,7 @@
      
      $target ="$filename";
 
-     move_uploaded_file($_FILES['picture']['tmp_name'], $target);   
+     move_uploaded_file($_FILES['image']['tmp_name'], $target);   
 
   $query = "INSERT INTO $table (name, street_address,  city, state, image, description, about, shows, albums,  band_members, map, band) VALUES ('$name', '$street_address', '$city', '$state', '$target', '$description', '$about', '$shows', '$albums', '$band_members', '$map', '$band')";
   
