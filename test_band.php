@@ -27,11 +27,11 @@
 
 
 
-     $filename = $_FILES['picture']['name'];
+     $filename = $_FILES['image']['name'];
      
      $target ="$filename";
 
-     move_uploaded_file($_FILES['picture']['tmp_name'], $target);   
+     move_uploaded_file($_FILES['image']['tmp_name'], $target);   
 
   $query = "INSERT INTO $table (name, street_address,  city, state, image, description, about, shows, albums,  band_members, map, band) VALUES ('$name', '$street_address', '$city', '$state', '$target', '$description', '$about', '$shows', '$albums', '$band_members', '$map', '$band')";
   
@@ -59,7 +59,8 @@ $query = "SELECT * FROM $table WHERE name = '$name'";
   }
 
   	echo "<h1>$band_name</h1>";
-      echo "<p>$street_address $city " . ", " . "$state</p>";
+      echo "<p>$street_address</p>
+      echo "<p>$city " . ", " . "$state</p>";
       echo "<p>$description</p>";
       echo "<p>Members: $members</p>";
 	echo "<p>Albums: $albums</p>";
