@@ -15,11 +15,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
 </head>
-<script type="text/javascript" src="calendarDateInput.js" />
+
 
 <body>
 <div id="wrap">
-    <!--<?php include("header.html"); ?>-->
+  
 	<div id="main">
 <?php
 
