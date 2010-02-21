@@ -15,7 +15,7 @@ include "db_connect.php";
 
 	$search = $_POST['searchbox']; 
 	$query = "SELECT * FROM bandInfo WHERE 
-		band = '1' AND
+		band = '1' AND(
 		name LIKE '%$search%' OR 
 		street_address LIKE '%$search%' OR 
 		city LIKE '%$search%' OR 
@@ -25,7 +25,7 @@ include "db_connect.php";
 		shows LIKE '%$search%' OR
 		albums LIKE '%$search%' OR
 		band_members LIKE '%$search%' OR
-		map LIKE '%$search%';";
+		map LIKE '%$search%');";
 
 	$result = mysqli_query($db, $query) 
 		or die("Error Querying Database"); 
@@ -42,7 +42,6 @@ echo "<th>Shows</th>";
 echo "<th>Map</th>"; 
 
 	while($row = mysqli_fetch_array($result)) {
-	$band = '1' AND
 		$name = $row['name']; 
 		$street_address = $row['street_address'];  
 		$city = $row['city']; 
