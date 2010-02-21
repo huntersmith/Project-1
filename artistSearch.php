@@ -9,7 +9,7 @@
 <body> 
 <div id="wrap"> 
 <div id="main"> 
-<?php 
+
 
 include "db_connect.php"; 
 
