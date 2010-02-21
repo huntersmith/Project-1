@@ -8,7 +8,6 @@
 </head>
 <body> 
 <div id="wrap"> 
-<?php include("artistHeader.html"); ?> 
 <div id="main"> 
 <?php 
 
@@ -43,6 +42,7 @@ echo "<th>Shows</th>";
 echo "<th>Map</th>"; 
 
 	while($row = mysqli_fetch_array($result)) {
+	$band = '1' AND
 		$name = $row['name']; 
 		$street_address = $row['street_address'];  
 		$city = $row['city']; 
@@ -69,8 +69,7 @@ echo "</table>";
 
 mysqli_close($db); 
 ?> 
-</div> 
-<?php include("searchByArtistSidebar.php"); ?> 
+</div>  
 <div id="footer"><p></p></div> 
 </div> 
 </body> 
