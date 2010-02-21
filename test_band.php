@@ -59,7 +59,7 @@ $query = "SELECT * FROM $table WHERE name = '$name'";
   }
 
   	echo "<h1>$band_name</h1>";
-      echo "<p>$street_address</p>
+      echo "<p>$street_address</p>"
       echo "<p>$city " . ", " . "$state</p>";
       echo "<p>$description</p>";
       echo "<p>Members: $members</p>";
