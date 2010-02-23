@@ -8,7 +8,6 @@
 </head>
 <body> 
 <div id="wrap"> 
-<?php include("artistHeader.html"); ?> 
 <div id="main"> 
 <?php 
 
@@ -69,8 +68,7 @@ echo "</table>";
 
 mysqli_close($db); 
 ?> 
-</div> 
-<?php include("searchByArtistSidebar.php"); ?> 
+</div>  
 <div id="footer"><p></p></div> 
 </div> 
 </body> 
