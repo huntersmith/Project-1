@@ -1,0 +1,19 @@
+Install:
+Download all files from Project-1:
+	artistSearch.php	
+	band_entry.html
+	db_connect.php
+	dbsetup.sql
+	index.php
+	maintable.php
+	searchByArtistSidebar.php
+	searchbar.php
+	settings.php
+	test_band.php
+	venue_display.php
+	venue_search_form.html
+Put all files into the same folder.
+
+Source the sql file (dbsetup.sql).
+
+Go to index.php, use from there
