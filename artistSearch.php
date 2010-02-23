@@ -8,15 +8,16 @@
 </head>
 <body> 
 <div id="wrap"> 
+<?php include("artistHeader.html"); ?> 
 <div id="main"> 
-
+<?php 
 
 include "db_connect.php"; 
 
 	$search = $_POST['searchbox']; 
 	$query = "SELECT * FROM bandInfo WHERE 
-		band = '1' AND(
-		name LIKE '%$search%' OR 
+		band = '1' AND
+		(name LIKE '%$search%' OR 
 		street_address LIKE '%$search%' OR 
 		city LIKE '%$search%' OR 
 		state LIKE '%$search%' OR 
@@ -68,7 +69,8 @@ echo "</table>";
 
 mysqli_close($db); 
 ?> 
-</div>  
+</div> 
+<?php include("searchByArtistSidebar.php"); ?> 
 <div id="footer"><p></p></div> 
 </div> 
 </body> 
