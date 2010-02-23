@@ -13,7 +13,7 @@
 
 include "db_connect.php"; 
 
-	$search = $_POST['searchbox']; 
+	$search = $_POST['searchband']; 
 	$query = "SELECT * FROM bandInfo WHERE 
 		band = '1' AND
 		(name LIKE '%$search%' OR 
