@@ -59,12 +59,11 @@ INSERT INTO `bandinfo` (`id`, `name`, `street_address`, `city`, `state`, `image`
 --
 
 CREATE TABLE IF NOT EXISTS `records` (
-  `id` int(11) NOT NULL,
-  `venue_id` int(11) NOT NULL,
-  `time` datetime NOT NULL,
-  `record_id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`record_id`),
-  KEY `id` (`id`,`venue_id`,`time`)
+  `band_id` int(11) NOT NULL,
+  `album` varchar(50) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
+  KEY `band_id` (`band_id`,`album`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
