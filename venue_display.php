@@ -30,18 +30,18 @@ while($row = mysqli_fetch_array($result)) {
 		$state = $row['state'];
 		//$pic = $row['image'];
 		$about = $row['about'];
-		//$map = $row['map'];
+		$map = $row['map'];
+		
+		$map = 'http://maps.google.com/maps?f=q&source=s_q&hl=en&q='.urlencode($street_address.' '.$city.' '.$state);
 		
 		echo "
 	<h1>$venue</h1>
 	<!--<img src='$pic' alt='$venue'/>-->
 	<p>Location: <br/>$street_address <br/> $city, $state </p>
 	<p> $about </p>
+	<a href='$map'>Need a map?</a>
 	";
-	//<p> <a href=$map>Link to map</a> <p>
     }
-
-	//<p> <a href=$map>Link to map</a> <p>
 	
     //include("sidebar.php"); ?>
 	</div>

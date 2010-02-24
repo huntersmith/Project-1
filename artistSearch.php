@@ -10,7 +10,6 @@
 <div id="wrap"> 
 <div id="main"> 
 <?php 
-
 include "db_connect.php"; 
 
 	$search = $_POST['searchband']; 
@@ -42,6 +41,7 @@ echo "<th>Shows</th>";
 echo "<th>Map</th>"; 
 
 	while($row = mysqli_fetch_array($result)) {
+		$id = $row['id'];
 		$name = $row['name']; 
 		$street_address = $row['street_address'];  
 		$city = $row['city']; 
@@ -52,9 +52,9 @@ echo "<th>Map</th>";
 		$albums = $row['albums'];
 		$band_members = $row['band_members'];
 		$map = $row['map'];
-
-echo "<tr> 
-<td>$name</td> 
+		
+echo "<tr>
+<td><b><a href='bandpage.php?id=$id'>$name</a></b><td>
 <td>$band_members</td> 
 <td >$albums</td> 
 <td>$city $state</td>
