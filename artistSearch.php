@@ -12,19 +12,18 @@
 <?php 
 include "db_connect.php"; 
 
-	$search = $_POST['searchband']; 
-	$query = "SELECT * FROM bandInfo WHERE 
-		band = '1' AND
-		(name LIKE '%$search%' OR 
-		street_address LIKE '%$search%' OR 
-		city LIKE '%$search%' OR 
-		state LIKE '%$search%' OR 
-		description LIKE '%$search%' OR 
-		about LIKE '%$search%' OR
-		shows LIKE '%$search%' OR
-		albums LIKE '%$search%' OR
-		band_members LIKE '%$search%' OR
-		map LIKE '%$search%');";
+	$band = $_POST['searchband']; 
+	$query = "SELECT * FROM bandinfo WHERE 
+		band = '1' AND (name LIKE '%$band%' OR
+		street_address LIKE '%$band%' OR
+		city LIKE '%$band%' OR
+		state LIKE '%$band%' OR
+		description LIKE '%$band%' OR
+		about LIKE '%$band%' OR
+		shows LIKE '%$band%' OR
+		albums LIKE '%$band%' OR
+		band_members LIKE '%$band%' OR
+		map LIKE '%$band%');";
 
 	$result = mysqli_query($db, $query) 
 		or die("Error Querying Database"); 
@@ -64,10 +63,10 @@ echo "<tr>
 <td >$map</td> 
 </tr>\n"; 
 } 
-echo "</table>"; 
+echo "</table>";
 
 mysqli_close($db); 
-?> 
+?>
 </div>  
 <div id="footer"><p></p></div> 
 </div> 
