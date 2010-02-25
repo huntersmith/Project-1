@@ -5,7 +5,8 @@
 	<tr bgcolor="white"><td align="center">
 		<font size="2" color="black"><b>Enter a band name to search:</b></font>
 		<form action="artistSearch.php" method="post">
-		<input type="text"><input name="searchband" type="submit" value="Search">
+		<input type="text" name="searchband">
+                <input name="submit" type="submit" value="Search">
 		</form>
 	</td></tr>
 	</table>	
@@ -25,5 +26,4 @@
 		</form>
 	</td></tr>
 	</table>
-
 
