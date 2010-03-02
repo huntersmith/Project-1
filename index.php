@@ -31,7 +31,7 @@ function hoveroff(cell) {
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Bands</td>
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "band_entry.html">Add Your Band</a></td>
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "venue_entry.html">Add a Venue</a></td>
-	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Link...</td></tr>
+	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "event_entry.html">Add an Event</a></td></tr>
 	</table>
 
 </td></tr>
