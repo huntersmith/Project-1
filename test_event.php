@@ -78,6 +78,9 @@ $band_name = $row['name'];
 
 ?>
 
+<br/>
+<a href = "index.php">Back to Main Page</a>
+
 </div>
 </body>
 </html>

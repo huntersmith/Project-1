@@ -17,13 +17,9 @@
   $city = $_POST['city'];
   $state = $_POST['state'];
   $image = $_POST['image'];
-  $description = $_POST['description'];
+  $genre = $_POST['genre'];
   $about = $_POST['about'];
-  $shows = $_POST['shows'];
-  $albums = $_POST['albums'];
-  $band_members = $_POST['band_members'];
-  $map = $_POST['map'];
-  $band = $_POST['band'];  
+  $band_members = $_POST['band_members'];  
 
 
 
@@ -33,7 +29,7 @@
 
      move_uploaded_file($_FILES['image']['tmp_name'], $target);   
 
-  $query = "INSERT INTO $table (name, street_address,  city, state, image, description, about, shows, albums,  band_members, map, band) VALUES ('$name', '$street_address', '$city', '$state', '$target', '$description', '$about', '$shows', '$albums', '$band_members', '$map', '$band')";
+  $query = "INSERT INTO $table (name, street_address, city, state, image, genre, about, members) VALUES ('$name', '$street_address', '$city', '$state', '$target', '$genre', '$about', '$band_members')";
   
 
   $result = mysqli_query($db, $query)
@@ -51,25 +47,26 @@ $query = "SELECT * FROM $table WHERE name = '$name'";
   	$street_address = $row['street_address'];
 	$city = $row['city'];
   	$state = $row['state'];
-  	$description = $row['description'];
-  	$members = $row['band_members'];
-      	$albums = $row['albums'];
-      	$about = $row['about'];
-      	$image = $row['image'];
+  	$genre = $row['genre'];
+  	$members = $row['members'];
+      $about = $row['about'];
+      $image = $row['image'];
   }
 
-  	echo "<h1>$band_name</h1>";
+  	echo "<h1>$name</h1>";
       echo "<p>$street_address</p>";
       echo "<p>$city " . ", " . "$state</p>";
-      echo "<p>$description</p>";
+      echo "<p>$genre</p>";
       echo "<p>Members: $members</p>";
-	echo "<p>Albums: $albums</p>";
 	echo "<p>Bio: $about</p></div>";
-      echo "<img src =\"$image\" />\n";
+      echo "<img src =\"$image\" style = \"width: 350px; height: 275 px;\"/>\n";
   
   mysqli_close($db);
 
 ?>
+
+<br/>
+<a href = "index.php">Back to Main Page</a>
 
 </div>
 </body>

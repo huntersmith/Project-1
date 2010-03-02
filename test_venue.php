@@ -57,6 +57,9 @@ $query = "SELECT * FROM venues WHERE name = '$name'";
 
 ?>
 
+<br/>
+<a href = "index.php">Back to Main Page</a>
+
 </div>
 </body>
 </html>
