@@ -23,7 +23,7 @@ include "db_connect.php";
 		shows LIKE '%$band%' OR
 		albums LIKE '%$band%' OR
 		band_members LIKE '%$band%' OR
-		map LIKE '%$band%');";
+		map LIKE '%$band%') ORDER BY name;";
 
 	$result = mysqli_query($db, $query) 
 		or die("Error Querying Database"); 
