@@ -13,19 +13,19 @@
 	<div id="contents">
   		<h1>Create Your Login</h1>
 
-    		<label for="street_address">First Name:</label>
+    		<label for="first_name">First Name:</label>
     		<input type="text" id="first_name" name="first_name"/><br/>
 
-    		<label for="street_address">Last  Name:</label>
+    		<label for="last_name">Last  Name:</label>
     		<input type="text" id="last_name" name="last_name"/><br/>
 
     		<label for="user_name">Login Name:</label>
     		<input type="text" id="user_name" name="name"/><br/>
 
-    		<label for="street_address">Email Address:</label>
+    		<label for="email">Email Address:</label>
     		<input type="text" id="email" name="email"/><br/>
     
-    		<label for="city">Password:</label>
+    		<label for="password">Password:</label>
     		<input type="text" id="password" name="password"/><br/>
 
     		<input type="submit" value="Create User" name="submit"/>
