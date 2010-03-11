@@ -4,7 +4,17 @@ include("settings.php");
 
 ?>
 <HTML>
-<BODY bgcolor="<?php echo($background); ?>">
+
+<style  TYPE="text/css">
+    BODY {
+	Background-color: #000000;
+	background-image: url(bgimage.jpg);
+	background-repeat: repeat-x; 
+	background-position: top;
+}
+</style>
+
+<BODY>
 <CENTER>
 
 <script language="JavaScript">
@@ -16,13 +26,13 @@ function hoveroff(cell) {
 }
 </script>
 
-<table border="0" cellpadding="5" cellspacing="0" width="90%">
+<table border="0" cellpadding="0" cellspacing="0" width="650">
 
 <tr><td colspan=2>
 
-	<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
-	<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-		<font size="7" color="<?php echo($headingtext); ?>"><b>Site Title</b></font>
+	<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="650">
+	<tr><td align="center">
+		<img src="header.jpg" border="0" width="650" height="200">
 	</td></tr>
 	</table>
 
