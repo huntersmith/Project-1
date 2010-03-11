@@ -12,6 +12,14 @@
 
 <body>
 	<div id="contents">
+		<?php
+                	include "db_connect.php";
+                	$primaryKey = $_POST['id'];
+
+                	$query = "Select * FROM bands WHERE id = '$primaryKey'";
+                	$result = mysqli_query($db, $query);
+        	?>
+
   		<h1>Edit Band Information</h1>
 
     		<label for="name">Band name:</label>

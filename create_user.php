@@ -29,6 +29,27 @@
     		<input type="text" id="password" name="password"/><br/>
 
     		<input type="submit" value="Create User" name="submit"/>
+		$userInfo = "INSERT INTO name_of_table(first_name, last_name, user_name, email, password) VALUES ('first_name', 'last_name', 'user_name', 'password');"
+                        
+                insert line to add information to table in database.
+		<?php
+                	include "db_connect.php";
+                	$userInfo = "INSERT INTO name_of_table(first_name, last_name, user_name, email, password) VALUES ('first_name', 'last_name', 'user_name', 'password');"
+			$confirmation = 'user_name';
+                	insert line to add information to table in database.
+
+                	$query = "SELECT * FROM users WHERE user_name = '$confirmation'";
+                	$result = mysqli_query($db, $query);
+
+                	if ($confirmation = mysqli_fetch_array($result)){
+                        	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>\n";
+
+                        	echo "<p><a href=\"login.php\">Continue</a></p>";
+                	}else{
+                        	echo "<p>User name is already in use please choose another.</p>\n";
+                        	echo  "<p><a href=\"create_user.php\">Continue</a></p>";
+                	}
+        	?>
 	</div>
 </body>
 
