@@ -16,7 +16,7 @@
                 	include "db_connect.php";
                 	$band_id = $_POST['band_id'];
 
-                	$query = "Select * FROM bands WHERE id = '$band_id';"
+                	$query = "Select * FROM bands WHERE id = '$band_id';";
                 	$result = mysqli_query($db, $query);
 			$name = $row['name'];
 			$street_address = $row['street_address'];
