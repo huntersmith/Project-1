@@ -6,7 +6,7 @@
 
 <?php
 	
-	$venue = mysqli_real_escape_string($db, trim($_POST['venue_searchbox']));
+	$venue = mysqli_real_escape_string($db, trim($_POST['venue_searchbox]));
 	$query = "SELECT * FROM venues WHERE name LIKE '%$venue%' ORDER BY name;";
  //   echo "$query";
     $result = mysqli_query($db, $query)
