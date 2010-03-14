@@ -4,11 +4,16 @@
 <?php
 	include "db_connect.php";
 	
-	$venue = $_POST['venue_searchbox'];
+	$venue = mysqli_real_escape_string($db, trim($_POST['venue_searchbox']));
 	$query = "SELECT * FROM venues WHERE name LIKE '%$venue%' ORDER BY name;";
  //   echo "$query";
     $result = mysqli_query($db, $query)
 		or die("Error Querying Database");
+
+$countrows = mysqli_num_rows($result);
+if ($countrows == 0) {
+	echo "<h1>No results matched your search!</h1>";
+} else {
 
 ?>
 <head>
@@ -42,7 +47,7 @@ while($row = mysqli_fetch_array($result)) {
 	<a href='$map'>Need a map?</a>
 	";
     }
-	
+    }
     //include("sidebar.php"); ?>
 	</div>
 </div>

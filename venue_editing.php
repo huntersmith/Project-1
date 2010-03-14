@@ -11,7 +11,7 @@
 	<div id="contents">
 		<?php
                         include "db_connect.php";
-                        $band_id = $_POST['venue_id'];
+                        $band_id = $_GET['id'];
 
                         $query = "Select * FROM bands WHERE id = '$band_id';"
                         $result = mysqli_query($db, $query);

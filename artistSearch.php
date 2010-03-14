@@ -12,7 +12,7 @@
 <?php 
 include "db_connect.php"; 
 
-	$band = $_POST['searchband']; 
+	$band = mysqli_real_escape_string($db, trim($_POST['searchband'])); 
 	$query = "SELECT * FROM bandinfo WHERE 
 		name LIKE '%$band%' OR
 		street_address LIKE '%$band%' OR
@@ -38,7 +38,7 @@ echo "<th>Genres</th>";
 echo "<th>About</th>";  
 
 	while($row = mysqli_fetch_array($result)) {
-		$id = $row['id'];
+		$id = $row['band_id'];
 		$name = $row['name']; 
 		$street_address = $row['street_address'];  
 		$city = $row['city']; 
