@@ -30,13 +30,13 @@
 	  while($row = mysqli_fetch_array($result))
         {
   	     $name = $row['name'];
-  	     echo "<option>$name</option>";
+  	     echo "<option value = $name>$name</option>";
         }
 	?>
     </select>
 <br/>
-    <label for="band">Band:</label>
-    <select name = "band">
+    <label for="band1">Band 1:</label>
+    <select name = "band1">
 	<?php
 	  $query = "SELECT DISTINCT name FROM bandinfo";
 	  $result = mysqli_query($db, $query)
@@ -47,10 +47,44 @@
   	     $name = $row['name'];
   	     echo "<option>$name</option>";
         }
-
+       ?>
+</select>
+<br />
+<label for="band2">Band 2:</label>
+    <select name = "band2">
+	<option>None</option>
+	<?php
+	  $query = "SELECT DISTINCT name FROM bandinfo";
+	  $result = mysqli_query($db, $query)
+			or die("Error Querying Database");
+	
+	  while($row = mysqli_fetch_array($result))
+        {
+  	     $name = $row['name'];
+		
+  	     		echo "<option>$name</option>";
+		
+        }
+  ?>
+</select>
+<br />
+    <label for="band3">Band 3:</label>
+    <select name = "band3">
+	<option>None</option>
+	<?php
+	  $query = "SELECT DISTINCT name FROM bandinfo";
+	  $result = mysqli_query($db, $query)
+			or die("Error Querying Database");
+	
+	  while($row = mysqli_fetch_array($result))
+        {
+  	     $name = $row['name'];
+  	     echo "<option>$name</option>";
+        }
       mysqli_close($db);
-	?>
-    </select>
+     ?>
+</select>
+      
 <br/>
    
 
