@@ -5,6 +5,7 @@ $_GET['id'];
 include "db_connect.php";
 
 $band = $_GET['id'];
+echo "band number is ".$band;
 $query = "SELECT * FROM bandinfo WHERE
 band_id = $band;";
  
