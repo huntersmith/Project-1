@@ -5,7 +5,7 @@
 	include "db_connect.php";
 	
 	$venue = $_POST['venue_searchbox'];
-	$query = "SELECT * FROM $table WHERE name LIKE '%$venue%' AND band='0' ORDER BY name;";
+	$query = "SELECT * FROM venues WHERE name LIKE '%$venue%' ORDER BY name;";
  //   echo "$query";
     $result = mysqli_query($db, $query)
 		or die("Error Querying Database");
