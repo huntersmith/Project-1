@@ -11,7 +11,7 @@
 <div id="main">
 <?php
 include "db_connect.php"; 
-$venue_id = $_GET['id'];
+$venue_id = $_POST['venue_id'];
 $name = $_POST['name'];
 $street_address = $_POST['street_address'];
 $city = $_POST['city'];
