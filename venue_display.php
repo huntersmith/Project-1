@@ -8,7 +8,7 @@
 
 <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
 <tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-<font size="5" color="<?php echo($headingtext); ?>"><b>Venue Display</b></font>
+<font size="5" color="<?php echo($headingtext); ?>"><b>Venue Results</b></font>
 </td></tr>
 <tr bgcolor="white"><td align="center">
 
