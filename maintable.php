@@ -15,7 +15,7 @@
 
 	  echo "$name";
 	  echo "<br/><br/> $about";
-	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/>\n";
+	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
            
          ?>
 	<br />
@@ -31,7 +31,7 @@
 
 	  echo "$name";
 	  echo "<br/><br/> $about";
-	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/>\n";
+	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
            mysqli_close($db);
          ?>
 	<br />
