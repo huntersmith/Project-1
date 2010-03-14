@@ -16,7 +16,9 @@
   $date = $_POST['date'];
   $time = $_POST['time'];
   $venue = $_POST['venue'];
-  $band = $_POST['band'];
+  $band1 = $_POST['band1'];
+  $band2 = $_POST['band2'];
+  $band3 = $_POST['band3'];
 
 $query = "SELECT venue_id FROM venues WHERE name = '$venue'";
 
@@ -27,15 +29,31 @@ $row = mysqli_fetch_array($result);
 $venue_id = $row['venue_id'];
 
 
-$query = "SELECT band_id FROM $table WHERE name = '$band'";
+$query = "SELECT band_id FROM $table WHERE name = '$band1'";
 
 $result = mysqli_query($db, $query)
     or die("Error 2 Querying Database");
 
 $row = mysqli_fetch_array($result);
-$band_id = $row['band_id'];
+$band_id1 = $row['band_id'];
 
-  $query = "INSERT INTO events (name, venue_id, date, time, band_id1) VALUES ('$name', '$venue_id', '$date', '$time', '$band_id')";
+$query = "SELECT band_id FROM $table WHERE name = '$band2'";
+
+$result = mysqli_query($db, $query)
+    or die("Error 2 Querying Database");
+
+$row = mysqli_fetch_array($result);
+$band_id2 = $row['band_id'];
+
+$query = "SELECT band_id FROM $table WHERE name = '$band3'";
+
+$result = mysqli_query($db, $query)
+    or die("Error 2 Querying Database");
+
+$row = mysqli_fetch_array($result);
+$band_id3 = $row['band_id'];
+
+  $query = "INSERT INTO events (name, venue_id, date, time, band_id1, band_id2, band_id3) VALUES ('$name', '$venue_id', '$date', '$time', '$band_id1', '$band_id2', '$band_id3')";
   
 
   $result = mysqli_query($db, $query)
@@ -53,7 +71,9 @@ $query = "SELECT * FROM events WHERE name = '$name'";
   	$venue_id = $row['venue_id'];
 	$date = $row['date'];
   	$time = $row['time'];
-  	$band_id = $row['band_id1'];
+  	$band_id1 = $row['band_id1'];
+ 	$band_id2 = $row['band_id2'];
+	$band_id3 = $row['band_id3'];
   }
 
 $query = "SELECT name FROM venues WHERE venue_id = '$venue_id'";
@@ -62,17 +82,31 @@ $result = mysqli_query($db, $query)
 $row = mysqli_fetch_array($result);
 $venue_name = $row['name'];
 
-$query = "SELECT name FROM bandinfo WHERE band_id = '$band_id'";
+$query = "SELECT name FROM bandinfo WHERE band_id = '$band_id1'";
 $result = mysqli_query($db, $query)
     or die("Error 6 Querying Database");
 $row = mysqli_fetch_array($result);
-$band_name = $row['name'];
+$band_name1 = $row['name'];
+
+$query = "SELECT name FROM bandinfo WHERE band_id = '$band_id2'";
+$result = mysqli_query($db, $query)
+    or die("Error 6 Querying Database");
+$row = mysqli_fetch_array($result);
+$band_name2 = $row['name'];
+
+$query = "SELECT name FROM bandinfo WHERE band_id = '$band_id3'";
+$result = mysqli_query($db, $query)
+    or die("Error 6 Querying Database");
+$row = mysqli_fetch_array($result);
+$band_name3 = $row['name'];
 
   	echo "<h1>$name</h1>";
       echo "<p>$venue_name</p>";
       echo "<p>$date</p>";
       echo "<p>$time</p>";
-      echo "<p>$band_name</p>";
+      echo "<p>$band_name1</p>";
+	echo "<p>$band_name2</p>";
+	echo "<p>$band_name3</p>";
   
   mysqli_close($db);
 

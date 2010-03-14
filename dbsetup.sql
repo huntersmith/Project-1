@@ -103,4 +103,4 @@ CREATE TABLE IF NOT EXISTS `login` (
   `lastname` varchar(20) NOT NULL,
   `email` varchar(60) NOT NULL,
   PRIMARY KEY (`id`),
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
