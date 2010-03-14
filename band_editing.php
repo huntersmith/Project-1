@@ -18,22 +18,24 @@
 
                 	$query = "Select * FROM bands WHERE id = '$band_id';";
                 	$result = mysqli_query($db, $query);
-			$name = $row['name'];
-			echo "$name \n"; 
-			$street_address = $row['street_address'];
-			echo "$street_address \n";
-			$city = $row['city'];
-			echo "$city \n";
-			$state = $row['state'];
-			echo "$state \n";
-			$image = $row['image'];
-			echo "$image \n";
-			$genre = $row['genre'];
-			echo "$genre \n";
-			$about = $row['about'];
-			echo "$about \n";
-			$members = $row['members'];
-			echo "$members \n";
+			while($row = mysqli_fetch_array($result)) {
+				$name = $row['name'];
+				echo "$name \n"; 
+				$street_address = $row['street_address'];
+				echo "$street_address \n";
+				$city = $row['city'];
+				echo "$city \n";
+				$state = $row['state'];
+				echo "$state \n";
+				$image = $row['image'];
+				echo "$image \n";
+				$genre = $row['genre'];
+				echo "$genre \n";
+				$about = $row['about'];
+				echo "$about \n";
+				$members = $row['members'];
+				echo "$members \n";
+			}
         	?>
 
   		<h1>Edit Band Information</h1>
