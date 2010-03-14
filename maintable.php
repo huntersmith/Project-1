@@ -13,7 +13,7 @@
            
          ?>
 	<br />
-		<font size="5" color="<?php echo($headingtext); ?>"><b>Featured Venue</b></font>
+		<font size="5" color="<?php echo($headingtext); ?>"><b>Featured Venue</b><br/></font>
          <?php
 	  $query = "SELECT * FROM venues ORDER BY RAND() LIMIT 1";
 	  $result = mysqli_query($db, $query);
