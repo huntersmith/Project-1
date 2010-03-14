@@ -23,18 +23,14 @@ $name = $row['name'];
 $street_address = $row['street_address'];
 $city = $row['city'];
 $state = $row['state'];
-$description = $row['description'];
 $about = $row['about'];
 $shows = $row['shows'];
-$albums = $row['albums'];
-$band_members = $row['band_members'];
-$map = $row['map'];
+$band_members = $row['members'];
 }
 echo "Band Name: ".$name."<br>";
 echo "Band Members: ".$band_members."<br>";
-echo "Albums: ".$albums."<br>";
 echo "Address: ".$street_address.", ".$city.", ".$state."<br>";
-echo "Description: ".$description."<br>";
+echo "Description: ".$about."<br>";
 
 echo "<a href='band_editing.php?id=$id'>Edit this Band</a>";
 
