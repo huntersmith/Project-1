@@ -5,24 +5,11 @@ $_GET['id'];
 include "db_connect.php";
 
 $band = $_GET['id'];
-echo "band number is ".$band;
 $query = "SELECT * FROM bandinfo WHERE
 band_id = $band;";
  
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
- 
-echo "<table boarder =1>";
-echo "<th>Band Name</th>";
-echo "<th>Band Members</th>";
-echo "<th>Albums</th>";
-echo "<th>Address</th>";
-echo "<th>Origin</th>";
-echo "<th>Description</th>";
-echo "<th>About</th>";
-echo "<th>Shows</th>";
-echo "<th>Map</th>";
-
 
 while($row = mysqli_fetch_array($result)) {
 $id = $row['id'];
@@ -37,10 +24,10 @@ $albums = $row['albums'];
 $band_members = $row['band_members'];
 $map = $row['map'];
 }
-echo "Band Name: ".$name;
-echo "Band Members: ".$band_members;
-echo "Albums: ".$albums;
-echo "Address: ".$street_address.", ".$city.", ".$state;
-echo "Description: ".$description;
+echo "Band Name: ".$name."\n";
+echo "Band Members: ".$band_members."\n";
+echo "Albums: ".$albums."\n";
+echo "Address: ".$street_address.", ".$city.", ".$state."\n";
+echo "Description: ".$description."\n";
 
 ?>
