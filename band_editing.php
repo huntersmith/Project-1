@@ -34,7 +34,7 @@
     		<input type="text" id="name" name="name" value=$name /><br/>
 
     		<label for="street_address">Street Address:</label>
-    		<input type="text" id="street_address" name="street_address" value='$street_address' /><br/>
+    		<input type="text" id="street_address" name="street_address" value=<?php echo $street_address ?> /><br/>
 
     		<label for="city">City:</label>
     		<input type="text" id="city" name="city" value=$city /><br/>
