@@ -43,4 +43,5 @@ echo "Albums: ".$albums;
 echo "Address: ".$street_address.", ".$city.", ".$state;
 echo "Description: ".$description;
 
+echo "<a href = 'band_editing.php?id=$id>Edit this Band</a>";
 ?>
