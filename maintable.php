@@ -13,15 +13,11 @@
            
          ?>
 	<br />
-	</td></tr>
-	<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
 		<font size="5" color="<?php echo($headingtext); ?>"><b>Featured Venue</b></font>
-	</td></tr>
-	<tr bgcolor="white"><td align="center">
          <?php
 	  $query = "SELECT * FROM venues ORDER BY RAND() LIMIT 1";
-	  $result = mysqli_query($db, $query)
-   		or die("Error 1 Querying Database");
+	  $result = mysqli_query($db, $query);
+   	  if(!$result) { echo(mysqli_error()); }
 	  $row = mysqli_fetch_array($result);
 	  $name = $row['name'];
 	  $about = $row['about'];
