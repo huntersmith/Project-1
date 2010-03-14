@@ -56,11 +56,11 @@ $band_members = $row['band_members'];
 $map = $row['map'];
 }
 
-echo "Band Name: ".$name."\n";
-echo "Band Members: ".$band_members."\n";
-echo "Albums: ".$albums."\n";
-echo "Address: ".$street_address.", ".$city.", ".$state."\n";
-echo "Description: ".$description."\n";
+echo "Band Name: ".$name."<br>";
+echo "Band Members: ".$band_members."<br>";
+echo "Albums: ".$albums."<br>";
+echo "Address: ".$street_address.", ".$city.", ".$state."<br>";
+echo "Description: ".$description."<br>";
 ?>
 </div>
 </body>
