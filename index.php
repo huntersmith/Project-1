@@ -2,6 +2,7 @@
 
 session_start();
 include("settings.php");
+include "db_connect.php"
 
 ?>
 <HTML>
@@ -49,11 +50,17 @@ function hoveroff(cell) {
 
 <tr><td width="70%" align="left" valign="top">
 
+         <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+	<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
+		<font size="5" color="<?php echo($headingtext); ?>"><b>Featured Band</b></font>
+	</td></tr>
+	<tr bgcolor="white"><td align="center">
+
 <?php
 
-if(isset($_GET['page']) && $_GET['page'] != "") {
+if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") {
 	$pagename = $_GET['page'];
-	if(file_exists(dirname($_SERVER['PHP_SELF'])."/".$pagename)) {
+	if(file_exists(dirname($_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF'])."/".$pagename)) {
 		include($pagename);
 	} else {
 		echo("<p><b>Page Not Found</b></p>");
@@ -62,6 +69,10 @@ if(isset($_GET['page']) && $_GET['page'] != "") {
 	include("maintable.php");
 }
 ?>
+
+	<br />
+	</td></tr>
+	</table>
 </td>
 <td width="30%" align="right" valign="top">
 
