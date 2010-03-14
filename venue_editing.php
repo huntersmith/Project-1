@@ -15,12 +15,20 @@
 
                         $query = "Select * FROM bands WHERE id = '$band_id';"
                         $result = mysqli_query($db, $query);
-                        $name = $row['name'];
-                        $street_address = $row['street_address'];
-                        $city = $row['city'];
-                        $state = $row['state'];
-                        $image = $row['image'];
-                        $about = $row['about'];
+			while($row = mysqli_fetch_array($result)) {
+                                $name = $row['name'];
+                                echo "$name \n";
+                                $street_address = $row['street_address'];
+                                echo "$street_address \n";
+                                $city = $row['city'];
+                                echo "$city \n";
+                                $state = $row['state'];
+                                echo "$state \n";
+                                $image = $row['image'];
+                                echo "$image \n";
+                                $about = $row['about'];
+                                echo "$about \n";
+                        }
                 ?>
 
   		<h1>Venue To Edit</h1>

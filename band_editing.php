@@ -42,28 +42,28 @@
   		<h1>Edit Band Information</h1>
 
     		<label for="name">Band name:</label>
-    		<input type="text" id="name" name="name" value=<?php echo $name ?> /><br/>
+    		<input type="text" id="name" name="name" value="<?php echo $name ?>" /><br/>
 
     		<label for="street_address">Street Address:</label>
     		<input type="text" id="street_address" name="street_address" value="<?php echo $street_address ?>" /><br/>
 
     		<label for="city">City:</label>
-    		<input type="text" id="city" name="city" value=<?php echo $city ?> /><br/>
+    		<input type="text" id="city" name="city" value="<?php echo $city ?>" /><br/>
 
     		<label for="state">State:</label>
-    		<input type="text" id="state" name="state" value=<?php echo $state ?>/><br/>
+    		<input type="text" id="state" name="state" value="<?php echo $state ?>" /><br/>
 
     		<label for="genre">Genre:</label>
-    		<input type="text" id="genre" name="genre" value=<?php echo $genre ?> /><br/>
+    		<input type="text" id="genre" name="genre" value="<?php echo $genre ?>" /><br/>
 
     		<label for="band_members">Band Members:</label>
-    		<input type="text" id="band_members" name="band_members" value=<?php echo $members ?> /><br/>
+    		<input type="text" id="band_members" name="band_members" value="<?php echo $members ?>" /><br/>
 
     		<label for="about">Band Bio:</label>
-    		<textarea id="about" name="about"><?php echo $about ?></textarea><br/>
+    		<textarea id="about" name="about">"<?php echo $about ?>"</textarea><br/>
 
     		<label for="image">Select a Picture file:</label>
-    		<input type="file" id="image" name="image" value=<?php echo $image ?> /><br/>
+    		<input type="file" id="image" name="image" value="<?php echo $image ?>" /><br/>
 
 
     		<input type="submit" value="Save Changes" name="submit"/>
