@@ -57,8 +57,8 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 	if(file_exists(dirname($_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF'])."/".$pagename)) {
 		include($pagename);
 	} else {
-		echo("<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
-			<tr bgcolor="white"><td align="center">
+		echo("<table border=\"1\" bordercolor=\"white\" cellpadding=\"5\" cellspacing=\"0\" width=\"100%\">
+			<tr bgcolor=\"white\"><td align=\"center\">
 			<p><b>Page Not Found</b></p>
 			<br />
 			</td></tr>
