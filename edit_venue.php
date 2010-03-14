@@ -47,9 +47,9 @@ $state = $row['state'];
 $about = $row['about'];
 }
 
-echo "Name: ".$name."\n";
-echo "Address: ".$street_address.", ".$city.", ".$state."\n";
-echo "Description: ".$about."\n";
+echo "Name: ".$name."<br>";
+echo "Address: ".$street_address.", ".$city.", ".$state."<br>";
+echo "Description: ".$about."<br>";
 ?>
 </div>
 </body>
