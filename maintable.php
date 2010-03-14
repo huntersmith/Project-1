@@ -1,5 +1,4 @@
 <?php 
-session_start();
 include "db_connect.php"
 ?>	
          <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
