@@ -11,9 +11,9 @@
 	<div id="contents">
 		<?php
                         include "db_connect.php";
-                        $band_id = $_GET['id'];
+                        $venue_id = $_GET['id'];
 
-                        $query = "Select * FROM bands WHERE id = '$band_id';"
+                        $query = "Select * FROM venues WHERE id = '$venue_id';"
                         $result = mysqli_query($db, $query);
 			while($row = mysqli_fetch_array($result)) {
                                 $name = $row['name'];
@@ -34,22 +34,22 @@
   		<h1>Venue To Edit</h1>
 
     		<label for="name">Venue name:</label>
-    		<input type="text" id="name" name="name" value=$name /><br/>
+    		<input type="text" id="name" name="name" value="<?php echo $name ?>"  /><br/>
 
     		<label for="street_address">Street Address:</label>
-    		<input type="text" id="street_address" name="street_address" value=$street_address/><br/>
+    		<input type="text" id="street_address" name="street_address" value="<?php echo $street_address ?>"  /><br/>
 
     		<label for="city">City:</label>
-    		<input type="text" id="city" name="city" value=$city /><br/>
+    		<input type="text" id="city" name="city" value="<?php echo $city ?>"  /><br/>
 
     		<label for="state">State:</label>
-    		<input type="text" id="state" name="state" value=$state /><br/>
+    		<input type="text" id="state" name="state" value="<?php echo $state ?>"  /><br/>
 
     		<label for="about">Description:</label>
-    		<textarea id="about" name="about">$about</textarea><br/>
+    		<textarea id="about" name="about"><?php echo $name ?></textarea><br/>
 
     		<label for="image">Select a Picture file:</label>
-    		<input type="file" id="image" name="image" value=$image /><br/>
+    		<input type="file" id="image" name="image" value="<?php echo $image ?>"  /><br/>
 
     		<input type="submit" value="Save Changes" name="submit"/>
   	</div>
