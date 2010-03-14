@@ -13,17 +13,17 @@
                         $result = mysqli_query($db, $query);
 			while($row = mysqli_fetch_array($result)) {
                                 $name = $row['name'];
-                                echo "$name \n";
+                                echo "$name <br/>";
                                 $street_address = $row['street_address'];
-                                echo "$street_address \n";
+                                echo "$street_address <br/>";
                                 $city = $row['city'];
-                                echo "$city \n";
+                                echo "$city <br/>";
                                 $state = $row['state'];
-                                echo "$state \n";
+                                echo "$state <br/>";
                                 $image = $row['image'];
-                                echo "$image \n";
+                                echo "$image <br/>";
                                 $about = $row['about'];
-                                echo "$about \n";
+                                echo "$about <br/>";
                         }
                 ?>
 

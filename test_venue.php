@@ -47,7 +47,7 @@ $query = "SELECT * FROM venues WHERE name = '$name'";
       echo "<p>$street_address</p>";
       echo "<p>$city " . ", " . "$state</p>";
 	echo "<p>$about</p></div>";
-      echo "<img src =\"$image\" style = \"width: 350px; height: 275 px;\"/>\n";
+      echo "<img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
   
   mysqli_close($db);
 

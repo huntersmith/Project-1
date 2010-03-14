@@ -37,11 +37,11 @@
                 	$result = mysqli_query($db, $query);
 
                 	if ($confirmation = mysqli_fetch_array($result)){
-                        	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>\n";
+                        	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 
                         	echo "<p><a href=\"login.php\">Continue</a></p>";
                 	}else{
-                        	echo "<p>User name is already in use please choose another.</p>\n";
+                        	echo "<p>User name is already in use please choose another.</p>";
                         	echo  "<p><a href=\"create_user.php\">Continue</a></p>";
                 	}
         	?>
