@@ -21,13 +21,13 @@ $about = $_POST['about'];
 
 $query = "UPDATE venues
 SET
-name=$name,
-street_address=$street_address,
-city=$city,
-state=$state,
-image=$image,
-about=$about,
-WHERE venue_id=$venue_id;";
+name='$name',
+street_address='$street_address',
+city='$city',
+state='$state',
+image='$image',
+about='$about',
+WHERE venue_id='$venue_id';";
 
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
