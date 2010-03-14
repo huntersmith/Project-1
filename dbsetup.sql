@@ -3,7 +3,7 @@ DROP DATABASE bands;
 CREATE DATABASE IF NOT EXISTS bands;
 GRANT ALL PRIVILEGES ON bands.* to 'banduser'@'localhost' identified by 'bands';
 --
--- Table structure for table `abduction_reports`
+-- 
 --
 USE bands;
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `venues` (
   `about` blob,
   `map` blob,
   PRIMARY KEY (`venue_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+);
 
 --
 -- Dumping data for table `venues`
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `records` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`record_id`),
   KEY `id` (`id`,`venue_id`,`time`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 
 --
@@ -104,5 +104,5 @@ CREATE TABLE IF NOT EXISTS `login` (
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   `email` varchar(60) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id`)
 );
