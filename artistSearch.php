@@ -48,7 +48,7 @@ echo "<th>About</th>";
 		$members = $row['members'];
 		
 echo "<tr>
-<td><b><a href='bandpage.php?id=$id'>$name</a></b></td>
+<td><b><a href='index.php?page=bandpage.php&id=$id'>$name</a></b></td>
 <td>$members</td>  
 <td>$city $state</td>
 <td>$genre</td>
