@@ -14,30 +14,28 @@ include "db_connect.php";
 
 	$band = $_POST['searchband']; 
 	$query = "SELECT * FROM bandinfo WHERE 
-		band = '1' AND (name LIKE '%$band%' OR
+		name LIKE '%$band%' OR
 		street_address LIKE '%$band%' OR
 		city LIKE '%$band%' OR
 		state LIKE '%$band%' OR
-		description LIKE '%$band%' OR
+		genre LIKE '%$band%' OR
 		about LIKE '%$band%' OR
-		shows LIKE '%$band%' OR
-		albums LIKE '%$band%' OR
-		band_members LIKE '%$band%' OR
-		map LIKE '%$band%') ORDER BY name;";
+		members LIKE '%$band%' ORDER BY name;";
 
 	$result = mysqli_query($db, $query) 
 		or die("Error Querying Database"); 
 
+$countrows = mysqli_num_rows($result);
+if ($countrows == 0) {
+	echo "<h1>No results matched your search!</h1>";
+} else {
+
 echo "<table boarder =1>"; 
 echo "<th>Band Name</th>"; 
 echo "<th>Band Members</th>";
-echo "<th>Albums</th>"; 
-echo "<th>Address</th>"; 
 echo "<th>Origin</th>"; 
-echo "<th>Description</th>"; 
-echo "<th>About</th>"; 
-echo "<th>Shows</th>";  
-echo "<th>Map</th>"; 
+echo "<th>Genres</th>"; 
+echo "<th>About</th>";  
 
 	while($row = mysqli_fetch_array($result)) {
 		$id = $row['id'];
@@ -45,24 +43,19 @@ echo "<th>Map</th>";
 		$street_address = $row['street_address'];  
 		$city = $row['city']; 
 		$state = $row['state'];
-		$description = $row['description'];
+		$genre = $row['genre'];
 		$about = $row['about'];
-		$shows = $row['shows'];
-		$albums = $row['albums'];
-		$band_members = $row['band_members'];
-		$map = $row['map'];
+		$members = $row['members'];
 		
 echo "<tr>
-<td><b><a href='bandpage.php?id=$id'>$name</a></b><td>
-<td>$band_members</td> 
-<td >$albums</td> 
+<td><b><a href='bandpage.php?id=$id'>$name</a></b></td>
+<td>$members</td>  
 <td>$city $state</td>
-<td >$description</td>
-<td >$about</td>
-<td >$shows</td>
-<td >$map</td> 
+<td>$genre</td>
+<td>$about</td> 
 </tr>\n"; 
-} 
+}
+}
 echo "</table>";
 
 mysqli_close($db); 
