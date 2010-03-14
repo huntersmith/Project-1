@@ -12,7 +12,7 @@
 <?php 
 include "db_connect.php"; 
 
-	$band = $_POST['searchband']; 
+	$band = mysqli_real_escape_string($db, trim($_POST['searchband'])); 
 	$query = "SELECT * FROM bandinfo WHERE 
 		name LIKE '%$band%' OR
 		street_address LIKE '%$band%' OR
