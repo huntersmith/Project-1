@@ -1,7 +1,5 @@
 <?php
-
 include("settings.php");
-
 ?>
 <HTML>
 
