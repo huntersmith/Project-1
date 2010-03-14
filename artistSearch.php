@@ -35,12 +35,7 @@ if ($countrows == 0) {
 	echo "<h1>No results matched your search!</h1>";
 } else {
 
-echo "<table boarder =1>"; 
-echo "<th>Band Name</th>"; 
-echo "<th>Band Members</th>";
-echo "<th>Origin</th>"; 
-echo "<th>Genres</th>"; 
-echo "<th>About</th>";  
+echo "<table boarder =1>";  
 
 	while($row = mysqli_fetch_array($result)) {
 		$id = $row['band_id'];
@@ -52,12 +47,13 @@ echo "<th>About</th>";
 		$about = $row['about'];
 		$members = $row['members'];
 		
-echo "<tr>
-<td><b><a href='index.php?page=bandpage.php&id=$id'>$name</a></b></td>
-<td>$members</td>  
-<td>$city $state</td>
-<td>$genre</td>
-<td>$about</td> 
+echo "
+<b><h1><a href='index.php?page=bandpage.php&id=$id'>$name<h1></a></h1></b>
+<tr>
+<p><font size = '5'><b>Members: </b></font>$members </p>
+<p><font size = '5'><b>Location: </b></font>$street_address <br>$city, $state </p>
+<p><font size = '5'><b>Genres: </b></font>$genre </p>
+<br><br>
 </tr>\n"; 
 }
 }
