@@ -32,8 +32,11 @@
         	?>
 
   		<h1>Edit Band Information</h1>
+		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_band.php">
+    		
+		<input type="hidden" name="band_id" value="<?php echo $band_id ?>"  />
 
-    		<label for="name">Band name:</label>
+		<label for="name">Band name:</label>
     		<input type="text" id="name" name="name" value="<?php echo $name ?>" /><br/>
 
     		<label for="street_address">Street Address:</label>
@@ -59,7 +62,7 @@
 
 
     		<input type="submit" value="Save Changes" name="submit"/>
-		
+		</form>
   	</div>
 
 <br />

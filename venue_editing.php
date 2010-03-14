@@ -28,7 +28,7 @@
                 ?>
 
   		<h1>Venue To Edit</h1>
-
+		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_venue.php">
     		<label for="name">Venue name:</label>
     		<input type="text" id="name" name="name" value="<?php echo $name ?>"  /><br/>
 
@@ -48,6 +48,7 @@
     		<input type="file" id="image" name="image" value="<?php echo $image ?>"  /><br/>
 
     		<input type="submit" value="Save Changes" name="submit"/>
+		</form>
   	</div>
 
 <br />
