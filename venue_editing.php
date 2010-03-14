@@ -32,6 +32,8 @@
     		<label for="name">Venue name:</label>
     		<input type="text" id="name" name="name" value="<?php echo $name ?>"  /><br/>
 
+                <input type="hidden" name="venue_id" value="<?php echo $venue_id ?>"  />
+
     		<label for="street_address">Street Address:</label>
     		<input type="text" id="street_address" name="street_address" value="<?php echo $street_address ?>"  /><br/>
 
