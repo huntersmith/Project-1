@@ -1,5 +1,8 @@
 <?php
+
+session_start();
 include("settings.php");
+
 ?>
 <HTML>
 
@@ -48,8 +51,16 @@ function hoveroff(cell) {
 
 <?php
 
-include("maintable.php");
-
+if(isset($_GET['page']) && $_GET['page'] != "") {
+	$pagename = $_GET['page'];
+	if(file_exists(dirname($_SERVER['PHP_SELF'])."/".$pagename)) {
+		include($pagename);
+	} else {
+		echo("<p><b>Page Not Found</b></p>");
+	}
+} else {
+	include("maintable.php");
+}
 ?>
 </td>
 <td width="30%" align="right" valign="top">
