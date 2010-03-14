@@ -6,36 +6,23 @@
 
 <?php
 	
-	$venue = mysqli_real_escape_string($db, trim($_POST['venue_searchbox]));
+	$venue = mysqli_real_escape_string($db, trim($_POST['venue_searchbox']));
 	$query = "SELECT * FROM venues WHERE name LIKE '%$venue%' ORDER BY name;";
- //   echo "$query";
+  // echo "$query";
     $result = mysqli_query($db, $query)
 		or die("Error Querying Database");
 
 $countrows = mysqli_num_rows($result);
 if ($countrows == 0) {
 	echo "<h1>No results matched your search!</h1>";
-} else {
-
-?>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
-</head>
-
-
-<body>
-<div id="wrap">
-  
-	<div id="main">
-<?php
+} else{
 
 while($row = mysqli_fetch_array($result)) {
 		$venue = $row['name'];
 		$street_address = $row['street_address'];
 		$city = $row['city'];
 		$state = $row['state'];
-		//$pic = $row['image'];
+		$pic = $row['image'];
 		$about = $row['about'];
 		$map = $row['map'];
 		
@@ -50,9 +37,8 @@ while($row = mysqli_fetch_array($result)) {
 	";
     }
     }
-    //include("sidebar.php"); ?>
-	</div>
-</div>
+    //include("sidebar.php"); 
+?>
 
 <br />
 </td></tr>
