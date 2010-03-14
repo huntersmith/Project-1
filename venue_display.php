@@ -1,8 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
+<font size="5" color="<?php echo($headingtext); ?>"><b>Venue Display</b></font>
+</td></tr>
+<tr bgcolor="white"><td align="center">
+
 <?php
-	include "db_connect.php";
 	
 	$venue = mysqli_real_escape_string($db, trim($_POST['venue_searchbox']));
 	$query = "SELECT * FROM venues WHERE name LIKE '%$venue%' ORDER BY name;";
@@ -51,5 +53,7 @@ while($row = mysqli_fetch_array($result)) {
     //include("sidebar.php"); ?>
 	</div>
 </div>
-</body>
-</html>
+
+<br />
+</td></tr>
+</table>

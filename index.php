@@ -50,12 +50,6 @@ function hoveroff(cell) {
 
 <tr><td width="70%" align="left" valign="top">
 
-         <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
-	<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-		<font size="5" color="<?php echo($headingtext); ?>"><b>Featured Band</b></font>
-	</td></tr>
-	<tr bgcolor="white"><td align="center">
-
 <?php
 
 if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") {
@@ -63,16 +57,18 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 	if(file_exists(dirname($_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF'])."/".$pagename)) {
 		include($pagename);
 	} else {
-		echo("<p><b>Page Not Found</b></p>");
+		echo("<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+			<tr bgcolor="white"><td align="center">
+			<p><b>Page Not Found</b></p>
+			<br />
+			</td></tr>
+			</table>");
 	}
 } else {
 	include("maintable.php");
 }
 ?>
 
-	<br />
-	</td></tr>
-	</table>
 </td>
 <td width="30%" align="right" valign="top">
 
