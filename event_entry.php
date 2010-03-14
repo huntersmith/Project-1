@@ -30,7 +30,7 @@
 	  while($row = mysqli_fetch_array($result))
         {
   	     $name = $row['name'];
-  	     echo "<option value = $name>$name</option>";
+  	     echo "<option>$name</option>";
         }
 	?>
     </select>

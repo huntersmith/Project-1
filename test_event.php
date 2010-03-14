@@ -12,13 +12,13 @@
 
 <?php
 
-  $name = $_POST['name'];
-  $date = $_POST['date'];
-  $time = $_POST['time'];
-  $venue = $_POST['venue'];
-  $band1 = $_POST['band1'];
-  $band2 = $_POST['band2'];
-  $band3 = $_POST['band3'];
+  $name = mysqli_real_escape_string($db, trim($_POST['name']));
+  $date = mysqli_real_escape_string($db, trim($_POST['date']));
+  $time = mysqli_real_escape_string($db, trim($_POST['time']));
+  $venue = mysqli_real_escape_string($db, trim($_POST['venue']));
+  $band1 = mysqli_real_escape_string($db, trim($_POST['band1']));
+  $band2 = mysqli_real_escape_string($db, trim($_POST['band2']));
+  $band3 = mysqli_real_escape_string($db, trim($_POST['band3']));
 
 $query = "SELECT venue_id FROM venues WHERE name = '$venue'";
 

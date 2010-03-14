@@ -12,12 +12,12 @@
 
 <?php
 
-  $name = $_POST['name'];
-  $street_address = $_POST['street_address'];
-  $city = $_POST['city'];
-  $state = $_POST['state'];
-  $image = $_POST['image'];
-  $about = $_POST['about'];
+  $name = mysqli_real_escape_string($db, trim($_POST['name']));
+  $street_address = mysqli_real_escape_string($db, trim($_POST['street_address']));
+  $city = mysqli_real_escape_string($db, trim($_POST['city']));
+  $state = mysqli_real_escape_string($db, trim($_POST['state']));
+  $image = mysqli_real_escape_string($db, trim($_POST['image']));
+  $about = mysqli_real_escape_string($db, trim($_POST['about']));
 
   $filename = $_FILES['image']['name'];
      
