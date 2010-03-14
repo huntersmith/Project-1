@@ -1,17 +1,11 @@
-<?php
-  session_start();
-?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  	<title>Log In</title>
-  	<link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
+<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
+<font size="5" color="<?php echo($headingtext); ?>"><b>Login</b></font>
+</td></tr>
+<tr bgcolor="white"><td align="center">
 
 <script type="text/javascript" src="calendarDateInput.js"/>
 
-<body>
 	<div id="contents">
 	<?php
   		include "db_connect.php";
@@ -34,6 +28,7 @@
     		}
 	?>
 	</div>
-</body>
 
-</html>
+<br />
+</td></tr>
+</table>

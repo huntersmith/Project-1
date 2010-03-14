@@ -1,3 +1,9 @@
+<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
+<font size="5" color="<?php echo($headingtext); ?>"><b>Band Page</b></font>
+</td></tr>
+<tr bgcolor="white"><td align="center">
+
 <?php
 
 $_GET['id'];
@@ -34,3 +40,7 @@ echo "<a href='band_editing.php?id=$id'>Edit this Band</a>";
 
 echo "<a href = 'band_editing.php?id=$id>Edit this Band</a>";
 ?>
+
+<br />
+</td></tr>
+</table>
