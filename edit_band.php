@@ -58,7 +58,10 @@ $map = $row['map'];
 
 echo "Band Name: ".$name."\n";
 echo "Band Members: ".$band_members."\n";
-?>
 echo "Albums: ".$albums."\n";
 echo "Address: ".$street_address.", ".$city.", ".$state."\n";
 echo "Description: ".$description."\n";
+?>
+</div>
+</body>
+</html>
