@@ -15,9 +15,10 @@
 		<?php
                 	include "db_connect.php";
                 	$band_id = $_GET['id'];
-
-                	$query = "Select * FROM bands WHERE id = '$band_id';";
-                	$result = mysqli_query($db, $query);
+			echo $band_id."\n";
+                	$query = "Select * FROM bandinfo WHERE band_id = '$band_id';";
+                	$result = mysqli_query($db, $query)
+				or die("Error querying database.");
 			while($row = mysqli_fetch_array($result)) {
 				$name = $row['name'];
 				echo "$name \n"; 
