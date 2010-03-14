@@ -24,7 +24,7 @@
    		if ($row = mysqli_fetch_array($result)){
 			echo "<p>Thanks for logging in, $name</p>\n";
 
-                	echo "<p><a href=\"search.php\">Continue</a></p>";
+                	echo "<p><a href=\"index.php?page=search.php\">Continue</a></p>";
    		}else{
                 	echo "<p>Incorrect username or password</p>\n";
                 	echo  "<h1>Log In</h1>\n  <form method=\"post\" action=\"login.php\">";

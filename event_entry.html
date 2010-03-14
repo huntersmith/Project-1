@@ -10,7 +10,7 @@
 <div id="contents">
   <h1>Add an Event</h1>
 
-    <form enctype="multipart/form-data" method="post" action="test_event.php">
+    <form enctype="multipart/form-data" method="post" action="index.php?page=test_event.php">
     <label for="name">Event name:</label>
     <input type="text" id="name" name="name" /><br />
     <label for="date">Date (yyyy/mm/dd):</label>
