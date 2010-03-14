@@ -10,6 +10,11 @@
     $result = mysqli_query($db, $query)
 		or die("Error Querying Database");
 
+$countrows = mysqli_num_rows($result);
+if ($countrows == 0) {
+	echo "<h1>No results matched your search!</h1>";
+} else {
+
 ?>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -42,7 +47,7 @@ while($row = mysqli_fetch_array($result)) {
 	<a href='$map'>Need a map?</a>
 	";
     }
-	
+    }
     //include("sidebar.php"); ?>
 	</div>
 </div>
