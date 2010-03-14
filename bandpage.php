@@ -2,7 +2,6 @@
 
 $_GET['id'];
 
-<?php
 include "db_connect.php";
 
 $band = $_GET['id'];
