@@ -9,21 +9,16 @@
                         include "db_connect.php";
                         $venue_id = $_GET['id'];
 
-                        $query = "Select * FROM venues WHERE id = '$venue_id';"
-                        $result = mysqli_query($db, $query);
+                        $query = "Select * FROM venues WHERE venue_id = '$venue_id';";
+                        $result = mysqli_query($db, $query)
+				or die("Error querying database.");
 			while($row = mysqli_fetch_array($result)) {
                                 $name = $row['name'];
-                                echo "$name <br/>";
                                 $street_address = $row['street_address'];
-                                echo "$street_address <br/>";
                                 $city = $row['city'];
-                                echo "$city <br/>";
                                 $state = $row['state'];
-                                echo "$state <br/>";
                                 $image = $row['image'];
-                                echo "$image <br/>";
                                 $about = $row['about'];
-                                echo "$about <br/>";
                         }
                 ?>
 

@@ -55,7 +55,7 @@
     		<input type="text" id="band_members" name="band_members" value="<?php echo $members ?>" /><br/>
 
     		<label for="about">Band Bio:</label>
-    		<textarea id="about" name="about">"<?php echo $about ?>"</textarea><br/>
+    		<textarea id="about" name="about"><?php echo $about ?></textarea><br/>
 
     		<label for="image">Select a Picture file:</label>
     		<input type="file" id="image" name="image" value="<?php echo $image ?>" /><br/>

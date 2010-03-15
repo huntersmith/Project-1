@@ -26,15 +26,15 @@ street_address='$street_address',
 city='$city',
 state='$state',
 image='$image',
-about='$about',
+about='$about'
 WHERE venue_id='$venue_id';";
 
 $result = mysqli_query($db, $query)
-or die("Error Querying Database");
+	or die("Error Querying Database");
 
-echo "the new information is:"
+echo "The new information is:";
 
-$query = "SELECT * FROM bandinfo WHERE venue_id=$venue_id";
+$query = "SELECT * FROM venues WHERE venue_id='$venue_id';";
 $result = mysqli_query($db, $query)
 	or die("Error Querying Database");
 

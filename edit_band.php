@@ -38,7 +38,7 @@ or die("Error Querying Database");
 
 echo "The new information is:";
 
-$query = "SELECT * FROM bandinfo WHERE band_id=$band_id;";
+$query = "SELECT * FROM bandinfo WHERE band_id='$band_id';";
 $result = mysqli_query($db, $query)
 	or die("Error Querying Database");
 
