@@ -7,7 +7,7 @@
 <body>
 	<div id="contents">
   		<h1>Create Your Login</h1>
-
+		<form enctype="multipart/form-data" method="post" action="index.php?page=user_created.php">
     		<label for="first_name">First Name:</label>
     		<input type="text" id="first_name" name="first_name"/><br/>
 
@@ -15,7 +15,7 @@
     		<input type="text" id="last_name" name="last_name"/><br/>
 
     		<label for="user_name">Login Name:</label>
-    		<input type="text" id="user_name" name="name"/><br/>
+    		<input type="text" id="user_name" name="user_name"/><br/>
 
     		<label for="email">Email Address:</label>
     		<input type="text" id="email" name="email"/><br/>
@@ -23,8 +23,7 @@
     		<label for="password">Password:</label>
     		<input type="text" id="password" name="password"/><br/>
 
-    		<input type="submit" value="Create User" name="submit"/>
-		$userInfo = "INSERT INTO name_of_table(first_name, last_name, user_name, email, password) VALUES ('first_name', 'last_name', 'user_name', 'password');"
+    		<input type="submit" value="Create User" name="submit" />
                         
                 insert line to add information to table in database.
 		<?php
@@ -45,6 +44,7 @@
                         	echo  "<p><a href=\"create_user.php\">Continue</a></p>";
                 	}
         	?>
+		</form>
 	</div>
 
 <br />

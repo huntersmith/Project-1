@@ -7,27 +7,18 @@
 		<?php
                 	include "db_connect.php";
                 	$band_id = $_GET['id'];
-			echo $band_id."\n";
                 	$query = "Select * FROM bandinfo WHERE band_id = '$band_id';";
                 	$result = mysqli_query($db, $query)
 				or die("Error querying database.");
 			while($row = mysqli_fetch_array($result)) {
-				$name = $row['name'];
-				echo "$name \n"; 
+				$name = $row['name']; 
 				$street_address = $row['street_address'];
-				echo "$street_address \n";
 				$city = $row['city'];
-				echo "$city \n";
 				$state = $row['state'];
-				echo "$state \n";
 				$image = $row['image'];
-				echo "$image \n";
 				$genre = $row['genre'];
-				echo "$genre \n";
 				$about = $row['about'];
-				echo "$about \n";
 				$members = $row['members'];
-				echo "$members \n";
 			}
         	?>
 
