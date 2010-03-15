@@ -16,18 +16,18 @@
                 $result = mysqli_query($db, $query)
                         or die("Error querying database.");
 
-                $confirmation = $confirmation = mysqli_num_rows($result);
+                $confirmation = mysqli_num_rows($result);
 
                 if ($confirmation == 0){
                         echo "<p>Thanks for logging in, $name</p>\n";
 
-                        echo "<p><a href=\"index.php?page=search.php\">Continue</a></p>";
+                        echo "<p><a href='index.php'>Continue</a></p>";
                 }else{
                         echo "<p>Incorrect username or password</p>\n";
                         echo  "<h1>Log In</h1>\n  <form method=\"post\" action=\"login.php\">";
                         echo "<label for=\"username\">Username:</label><input type=\"text\" id=\"username\" name=\"username\" /><br />";
                         echo "<label for=\"pw\">Password:</label><input type=\"password\" id=\"pw\" name=\"pw\" /><br />";
-                        echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"createAccount.php\">Create Account</a></p>";
+                        echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"create_user.php\">Create Account</a></p>";
                 }
         ?>
         </div>

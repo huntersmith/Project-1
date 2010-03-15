@@ -7,19 +7,16 @@
 <script type="text/javascript" src="calendarDateInput.js"/>
 
 	<div id="contents">
-	<?php
-  		include "db_connect.php";
-
 		<form enctype="multipart/form-data" method="post" action="index.php?page=login_confirmation.php">
-                <label for="first_name">User Name:</label>
+                
+		<label for="user_name">User Name:</label>
                 <input type="text" id="user_name" name="user_name" /><br/>
 
-                <label for="last_name">Password:</label>
-                <input type="text" id="password" name="password" /><br/>
+                <label for="password">Password:</label>
+                <input type=\"password\" id=\"password\" name=\"password\" /><br />
 
                 <input type="submit" value="Login" name="submit" />
                 </form>		
-	?>
 	</div>
 
 <br />

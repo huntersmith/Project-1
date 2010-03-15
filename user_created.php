@@ -29,7 +29,7 @@
 		$result = mysqli_query($db, $userInfo);
         	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 
-                echo "<p><a href=\"login.php\">Continue</a></p>";
+                echo "<p><a href=\"index.php?page=login.php\">Continue</a></p>";
         }else{
                 echo "<p>User name is already in use please choose another.</p>";
                 echo  "<p><a href=\"create_user.php\">Continue</a></p>";
