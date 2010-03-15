@@ -18,11 +18,14 @@
 	$email = mysqli_real_escape_string($db, trim($_POST['email']));
 	$password = mysqli_real_escape_string($db, trim($_POST['password']));
 
-        $query = "SELECT * FROM users WHERE user_name = '$user_name';";
-        $result = mysqli_query($db, $query);
+        $query = "SELECT * FROM login WHERE username = '$user_name';";
+        $result = mysqli_query($db, $query)
+		or die("Error querying database.");
+	
+	$confirmation = mysqli_num_rows($result);
 
-        if (0 = mysqli_num_rows($result);){
-		$userInfo = "INSERT INTO name_of_table(first_name, last_name, user_name, email, password) VALUES ('$first_name', '$last_name', '$user_name', '$email', '$password');";
+        if ($confirmation == 0){
+		$userInfo = "INSERT INTO login(username, password, firstname, lastname, email) VALUES ('$user_name', '$password', '$first_name', '$last_name', '$email');";
 		$result = mysqli_query($db, $userInfo);
         	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 
