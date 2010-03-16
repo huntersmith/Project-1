@@ -28,13 +28,13 @@ function hoveroff(cell) {
 }
 </script>
 
-<table border="0" cellpadding="0" cellspacing="0" width="650">
+<table border="0" cellpadding="0" cellspacing="0" width="750">
 
-<tr><td colspan=2>
+<tr><td colspan="3">
 
-	<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="650">
+	<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="750">
 	<tr><td align="center">
-		<img src="header.jpg" border="0" width="650" height="200">
+		<img src="header.jpg" border="0" width="750" height="200">
 	</td></tr>
 	</table>
 
@@ -45,7 +45,7 @@ function hoveroff(cell) {
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "index.php?page=venue_entry.html">Add a Venue</a></td>
 	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "index.php?page=event_entry.php">Add an Event</a></td></tr>
 	</table>
-
+<br />
 </td></tr>
 
 <tr><td width="70%" align="left" valign="top">
@@ -70,7 +70,10 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 ?>
 
 </td>
-<td width="30%" align="right" valign="top">
+
+<td width="2%">&nbsp;</td>
+
+<td width="28%" align="right" valign="top">
 
 <?php
 include("searchbar.php");
