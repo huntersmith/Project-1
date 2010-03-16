@@ -2,7 +2,12 @@
 
 session_start();
 include("settings.php");
-include "db_connect.php"
+include "db_connect.php";
+
+function buildnav($number,$link) {
+	$navoutput = "<td height=\"30\" width=\"150\" onclick=\"window.location.href='".$link."'\" onMouseOver=\"this.style.background='url(nav".$number."b.jpg)'\" onMouseOut=\"this.style.background='url(nav".$number."a.jpg)'\" background=\"nav".$number."a.jpg\" align=\"center\"></td>";
+	return $navoutput;
+}
 
 ?>
 <HTML>
@@ -19,15 +24,6 @@ include "db_connect.php"
 <BODY>
 <CENTER>
 
-<script language="JavaScript">
-function hoveron(cell) {
-  cell.style.background='<?php echo($hovercolor); ?>'
-}
-function hoveroff(cell) {
-  cell.style.background='<?php echo($cellbg); ?>'
-}
-</script>
-
 <table border="0" cellpadding="0" cellspacing="0" width="750">
 
 <tr><td colspan="3">
@@ -38,13 +34,23 @@ function hoveroff(cell) {
 	</td></tr>
 	</table>
 
-	<table border="1" bordercolor="white" cellpadding="3" cellspacing="5" width="100%">
-	<tr bgcolor="<?php echo($cellbg); ?>"><td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href="index.php">Home</a></td>
-	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>">Bands</td>
-	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "index.php?page=band_entry.html">Add Your Band</a></td>
-	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "index.php?page=venue_entry.html">Add a Venue</a></td>
-	<td onMouseOver="hoveron(this)" onMouseOut="hoveroff(this)" align="center"><font size="2" color="<?php echo($headingtext); ?>"><a href = "index.php?page=event_entry.php">Add an Event</a></td></tr>
+
+<table border="1" bordercolor="white" cellpadding="0" cellspacing="0">
+<tr><td>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr">
+	<?php
+	echo(buildnav(1, "index.php"));
+	echo(buildnav(2, "index.php"));
+	echo(buildnav(3, "index.php?page=band_entry.html"));
+	echo(buildnav(4, "index.php?page=venue_entry.html"));
+	echo(buildnav(5, "index.php?page=event_entry.php"));
+	?>
+	</tr>
 	</table>
+</td></tr>
+</table>
+
 <br />
 </td></tr>
 
