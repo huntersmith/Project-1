@@ -54,7 +54,7 @@ function buildnav($number,$link) {
 <br />
 </td></tr>
 
-<tr><td width="70%" align="left" valign="top">
+<tr><td width="525" align="left" valign="top">
 
 <?php
 
@@ -77,9 +77,9 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 
 </td>
 
-<td width="2%">&nbsp;</td>
+<td width="15">&nbsp;</td>
 
-<td width="28%" align="right" valign="top">
+<td width="210" align="right" valign="top">
 
 <?php
 include("searchbar.php");
