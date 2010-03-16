@@ -51,7 +51,11 @@ function buildnav($number,$link) {
 </td></tr>
 </table>
 
-<br />
+</td></tr>
+
+<tr><td colspan="3" align="right">
+<a href="index.php?page=login.php"><font size="1" color="white"><b>Login</b></font></a> <font size="1" color="white">|</font> <a href="index.php?page=create_user.php"><font size="1" color="white"><b>New User</b></font></a>
+<br /><br />
 </td></tr>
 
 <tr><td width="525" align="left" valign="top">
