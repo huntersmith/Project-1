@@ -4,8 +4,6 @@
 </td></tr>
 <tr bgcolor="white"><td align="center">
 
-<script type="text/javascript" src="calendarDateInput.js"/>
-
 	<div id="contents">
 		<form enctype="multipart/form-data" method="post" action="index.php?page=login_confirmation.php">
                 

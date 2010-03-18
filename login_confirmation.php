@@ -4,8 +4,6 @@
 </td></tr>
 <tr bgcolor="white"><td align="center">
 
-<script type="text/javascript" src="calendarDateInput.js"/>
-
         <div id="contents">
         <?php
                 include "db_connect.php";
