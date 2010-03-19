@@ -42,7 +42,8 @@ while($row = mysqli_fetch_array($result)) {
 $name = $row['name'];
 }
 
-echo "Venue: ".$name."<br>";
+echo "Venue: ";
+echo "<a href = venuepage.php?id=$venue_id>$name</a><br/>";
 
 $query = "SELECT name FROM bandinfo WHERE
 band_id = $band1;";
@@ -54,7 +55,8 @@ while($row = mysqli_fetch_array($result)) {
 $name1 = $row['name'];
 }
 
-echo "Band 1: ".$name1."<br>";
+echo "Band 1: ";
+echo "<a href = bandpage.php?id=$band1>$name1</a><br/>";
 
 $query = "SELECT name FROM bandinfo WHERE
 band_id = $band2;";
@@ -68,7 +70,8 @@ $name2 = $row['name'];
 
 if($band2 != 0)
 {
-	echo "Band 2: ".$name2."<br>";
+	echo "Band 2: ";
+	echo "<a href = bandpage.php?id=$band2>$name2</a><br/>";
 }
 
 $query = "SELECT name FROM bandinfo WHERE
@@ -83,7 +86,8 @@ $name3 = $row['name'];
 
 if($band3 != 0)
 {
-	echo "Band 3: ".$name3."<br>";
+	echo "Band 3: ";
+	echo "<a href = bandpage.php?id=$band3>$name3</a><br/>";
 }
 
 
