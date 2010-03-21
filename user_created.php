@@ -32,7 +32,8 @@
         if ($confirmation == 0){
 		$userInfo = "INSERT INTO login(username, password, firstname, lastname, email) VALUES ('$user_name', SHA('$password'), '$first_name', '$last_name', '$email');";
 		$result = mysqli_query($db, $userInfo);
-$url = 'index.php?page=login.php?new_user=yes';
+$new_user = true;
+$url = 'index.php?page=login.php?new_user=$new_user';
                    header("Location: $url"); 
         //	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 
