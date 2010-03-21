@@ -13,15 +13,15 @@
 	include "db_connect.php";
 	
 	$first_name = mysqli_real_escape_string($db, trim($_POST['first_name']));
-echo "first name is ".$first_name."</br>";
+
 	$last_name = mysqli_real_escape_string($db, trim($_POST['last_name']));
-echo "last name is ".$last_name."</br>";
+
 	$user_name = mysqli_real_escape_string($db, trim($_POST['user_name']));
-echo "username is ".$user_name."</br>";
+
 	$email = mysqli_real_escape_string($db, trim($_POST['email']));
-echo "email is ".$email."</br>";
+
 	$password = mysqli_real_escape_string($db, trim($_POST['password']));
-echo "password is ".$password."</br>";
+
 
         $query = "SELECT * FROM login WHERE username = '$user_name';";
         $result = mysqli_query($db, $query)
@@ -32,7 +32,9 @@ echo "password is ".$password."</br>";
         if ($confirmation == 0){
 		$userInfo = "INSERT INTO login(username, password, firstname, lastname, email) VALUES ('$user_name', SHA('$password'), '$first_name', '$last_name', '$email');";
 		$result = mysqli_query($db, $userInfo);
-        	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
+$url = 'index.php?page=login.php?new_user=yes';
+                   header("Location: $url"); 
+        //	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 
                 echo "<p><a href=\"index.php?page=login.php\">Continue</a></p>";
         }else{
@@ -43,4 +45,3 @@ echo "password is ".$password."</br>";
 </div>
 </body>
 </html>
-
