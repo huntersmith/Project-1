@@ -31,6 +31,14 @@ CREATE TABLE IF NOT EXISTS `bandinfo` (
 INSERT INTO `bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
 (1, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', '', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
 (2, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', '', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan');
+(3, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star);
+(4,'Blue', '333 SW 1st St', 'Afton', 'OK','', 'Techno', NULL, 'Linda, Jessica, Dan');
+(5, 'Sunshine', '270', 'Charles St', 'Fredericksburg', 'VA','','Pop',NULL,'Elizabeth, Ben, Zac');
+(6, 'The Judges','200', 'UCLA Medical Plaza', 'Los Angeles', 'CA','','Heavy metal',NULL,'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews');
+(7,'Led Zeppelin','501', 'University Avenue','Fort Collins', 'CO','','Rock',NULL,'Jimmy Page, John Paul Jones, Robert Plant, John Bonham');
+(9,'Pink Floyd', '147', 'Shenango Avenue', 'Sharon', 'PA','','Rock',NULL,'Syd Barrett, David Gilmour, Bob Klose, Nick Mason, Roger Waters, Richard Wright');
+(10, 'The Beach Boys','75', '3rd Avenue', 'New York', 'NY','','Sunshine Pop',NULL, 'Al Jardine, Bruce Johnston, Mike Love, Brian Wilson');
+
 
 -- --------------------------------------------------------
 
