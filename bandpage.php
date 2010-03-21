@@ -49,7 +49,7 @@ echo "<li>$name</li>";
 }
 echo "</ul>";
 
-echo "<a href='band_editing.php?id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
+echo "<a href='index.php?page=band_editing.php&id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
 
 ?>
 

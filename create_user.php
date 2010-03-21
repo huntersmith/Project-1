@@ -6,7 +6,6 @@
 
 <body>
 	<div id="contents">
-  		<h1>Create Your Login</h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=user_created.php">
     		<label for="first_name">First Name:</label>
     		<input type="text" id="first_name" name="first_name"/><br/>
