@@ -16,13 +16,19 @@ $genre = $_POST['genre'];
 $about = $_POST['about'];
 $members = $_POST['band_members'];
 
+$filename = $_FILES['image']['name'];
+     
+$target ="$filename";
+
+move_uploaded_file($_FILES['image']['tmp_name'], $target);
+
 $query = "UPDATE bandinfo
 SET
 name='$name',
 street_address='$street_address',
 city='$city',
 state='$state',
-image='$image',
+image='$target',
 genre='$genre',
 about='$about',
 members='$members'
