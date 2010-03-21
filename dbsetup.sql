@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `records` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(50) NOT NULL,
   `releaseDate` DATE NOT NULL,
-  'band_id' smallint(6) NOT NULL,
+  `band_id` smallint(6) NOT NULL,
   CONSTRAINT bandinfo_band_id_fk
   FOREIGN KEY (`band_id`)
   REFERENCES bandinfo (`band_id`)
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `records` (
 --
 INSERT INTO `records` (`record_id`, `name`, `releaseDate`, `band_id`) VALUES
 (NULL, 'Introducing... the Beatles', '1964-01-10', 3),
-(NULL, 'The Beatles\' Second Album', '1964-04-10', 3),
+(NULL, 'The Beatles Second Album', '1964-04-10', 3),
 (NULL, 'Something New', '1964-07-20', 3),
 (NULL, 'The Beatles Story', '1964-11-23', 3),
 (NULL, 'Beatles 65', '1964-12-15', 3),
