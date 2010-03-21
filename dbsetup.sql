@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `venues` (
 INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `city`, `state`, `image`, `about`, `map`) VALUES
 (NULL, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
-(NULL, 'Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
+(NULL, 'Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', 'greathall.jpg', NULL, NULL),
 (NULL, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'The Griffin', '723 Caroline St', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL);
