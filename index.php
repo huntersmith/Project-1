@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include("settings.php");
 include "db_connect.php";
