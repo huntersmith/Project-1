@@ -5,7 +5,6 @@
 <tr bgcolor="white"><td align="left">
 
 <?php include "db_connect.php" ?>
-<div id="contents">
 
 <?php   
 
@@ -21,22 +20,16 @@ $query = "SELECT name, image, venue_id FROM venues";
 
       echo "<table style = \"width: 300px;\"/></>";
 	echo "<tr><td><img src =\"$image\" style = \"width: 100px; height: 75px;\"/></td>";
-  	echo "<td><a href='venuepage.php?id=$id'>$name</a></td></tr><br/>";
+  	echo "<td><a href='index.php?page=venuepage.php&id=$id'>$name</a></td></tr><br/>";
 }
   
   mysqli_close($db);
 
 ?>
-
+</table>
 <br/>
-
-
-</div>
-
 
 
 <br />
 </td></tr>
 </table>
-
-

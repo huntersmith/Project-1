@@ -33,7 +33,7 @@ while($row = mysqli_fetch_array($result)) {
 		<p>Location: <br/>$street_address <br/> $city, $state </p>
 		<p> $about </p>
 		<a href='$map'>Need a map?</a>
-		<a href='venue_editing.php?id=$venue_id'>Edit this Venue</a>
+		<a href='index.php?page=venue_editing.php&id=$venue_id'>Edit this Venue</a>
 		";
     }
 
@@ -45,7 +45,3 @@ while($row = mysqli_fetch_array($result)) {
 <br />
 </td></tr>
 </table>
-
-<br />
-<br />
-<a href='index.php'>Back to Main Page</a>

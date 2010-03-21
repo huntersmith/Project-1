@@ -32,7 +32,7 @@ echo "Band Members: ".$band_members."<br>";
 echo "Address: ".$street_address.", ".$city.", ".$state."<br>";
 echo "Description: ".$about."<br>";
 
-echo "<a href='band_editing.php?id=$id'>Edit this Band</a>";
+echo "<a href='index.php?page=band_editing.php&id=$id'>Edit this Band</a>";
 
 //echo "<a href = 'band_editing.php?id=$id>Edit this Band</a>";
 ?>

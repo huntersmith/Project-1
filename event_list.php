@@ -5,7 +5,6 @@
 <tr bgcolor="white"><td align="left">
 
 <?php include "db_connect.php" ?>
-<div id="contents">
 
 <?php   
 
@@ -29,17 +28,10 @@ $query = "SELECT name, date, time, event_id FROM events";
   mysqli_close($db);
 
 ?>
-
+</table>
 <br/>
-
-
-</div>
-
 
 
 <br />
 </td></tr>
 </table>
-<br />
-<br />
-<a href='index.php'>Back to Main Page</a>
