@@ -1,3 +1,6 @@
+<script type="text/javascript" src="datepickercontrol.js"></script>
+<link type="text/css" rel="stylesheet" href="datepickercontrol.css">
+
 <table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
 <tr bgcolor="white"><td align="center">
 <img border="0" src="title_addevent.jpg">
@@ -10,7 +13,7 @@
     <label for="name">Event name:</label>
     <input type="text" id="name" name="name" /><br />
     <label for="date">Date (yyyy/mm/dd):</label>
-    <input type="date" id="date" name="date" /><br />
+    <input name="date" type="text" id="DPC_date_YYYY-MM-DD" value="" width="80"><br />
     <label for="time">Time:</label>
     <input type="text" id="time" name="time" /><br />
 
