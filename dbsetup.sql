@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `bandinfo` (
 INSERT INTO `bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
 (NULL, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', 'default.jpeg', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
 (NULL, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', 'default.jpeg', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan'),
-(NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','default.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'),
+(NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','beatles_abbey-road.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'),
 (NULL, 'Blue', '333 SW 1st St', 'Afton', 'OK', 'default.jpeg', 'Techno', NULL, 'Linda, Jessica, Dan'),
 (NULL, 'Sunshine', '270 Charles St', 'Fredericksburg', 'VA', 'default.jpeg', 'Pop', NULL, 'Elizabeth, Ben, Zac'),
 (NULL, 'The Judges','200 UCLA Medical Plaza', 'Los Angeles', 'CA', 'default.jpeg', 'Heavy metal', NULL, 'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews'),
