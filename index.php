@@ -2,6 +2,11 @@
 session_start();
 include("settings.php");
 include "db_connect.php";
+if(!(mysql_query("SELECT * FROM bands")))
+{
+$url = 'install.php';
+header("Location: $url");
+}
 
 function buildnav($number,$link) {
 	$navoutput = "<td height=\"30\" width=\"150\" onclick=\"window.location.href='".$link."'\" onMouseOver=\"this.style.background='url(nav".$number."b.jpg)'\" onMouseOut=\"this.style.background='url(nav".$number."a.jpg)'\" background=\"nav".$number."a.jpg\" align=\"center\"></td>";
