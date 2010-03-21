@@ -11,13 +11,7 @@ echo("<table border=0>");
 
 	$band = mysqli_real_escape_string($db, trim($_POST['searchband'])); 
 	$query = "SELECT * FROM bandinfo WHERE 
-		name LIKE '%$band%' OR
-		street_address LIKE '%$band%' OR
-		city LIKE '%$band%' OR
-		state LIKE '%$band%' OR
-		genre LIKE '%$band%' OR
-		about LIKE '%$band%' OR
-		members LIKE '%$band%' ORDER BY name;";
+		name LIKE '%$band%' ORDER BY name;";
 
 	$result = mysqli_query($db, $query) 
 		or die("Error Querying Database"); 
@@ -36,7 +30,6 @@ echo "<table boarder =1>";
 		$city = $row['city']; 
 		$state = $row['state'];
 		$genre = $row['genre'];
-		$about = $row['about'];
 		$members = $row['members'];
 		
 echo "

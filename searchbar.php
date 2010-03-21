@@ -5,7 +5,7 @@
 	<tr bgcolor="white"><td align="center">
 		<font size="2" color="black"><b>Enter a band name to search:</b></font>
 		<form action="index.php?page=artistSearch.php" method="post">
-		<input type="text" name="searchband" value = "Enter band..." onfocus = "this.value">
+		<input type="text" name="searchband" value = "Enter band..." onFocus="if (value == 'Enter band...') {value=''}" onBlur="if (value== '') {value='Enter band...'}">
                 <input name="submit" type="submit" value="Search">
 		</form>
 	</td></tr>
@@ -21,7 +21,7 @@
 	<tr bgcolor="white"><td align="center">
 		<font size="2" color="black"><b>Enter a club name or zip code to search:</b></font>
 		<form action="index.php?page=venue_display.php" method="post">
-		<input type="text" name="venue_searchbox" value = "Enter venue..." onfocus = "this.value">
+		<input type="text" name="venue_searchbox" value = "Enter venue..." onFocus="if (value == 'Enter venue...') {value=''}" onBlur="if (value== '') {value='Enter venue...'}">
                 <input name="submit" type="submit" value="Search">
 		</form>
 	</td></tr>
@@ -36,8 +36,8 @@
 	</td></tr>
 	<tr bgcolor="white"><td align="center">
 		<font size="2" color="black"><b>Enter an event to search:</b></font>
-		<form action="index.php?page=eventSearch.php" method="post">
-		<input type="text" name="searchevent" value = "Enter event..." onfocus = "this.value">
+		<form action="index.php?page=event_search.php" method="post">
+		<input type="text" name="searchevent" value = "Enter event..." onFocus="if (value == 'Enter event...') {value=''}" onBlur="if (value== '') {value='Enter event...'}">
                 <input name="submit" type="submit" value="Search">
 		</form>
 	</td></tr>
