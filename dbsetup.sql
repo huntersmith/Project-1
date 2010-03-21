@@ -1,4 +1,4 @@
-DROP DATABASE bands;
+IF DATABASE EXISTS DROP DATABASE bands;
 
 CREATE DATABASE IF NOT EXISTS bands;
 GRANT ALL PRIVILEGES ON bands.* to 'banduser'@'localhost' identified by 'bands';
