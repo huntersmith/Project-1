@@ -12,8 +12,9 @@
 	  $name = $row['name'];
 	  $about = $row['about'];
 	  $image = $row['image'];
+	  $
 
-	  echo "$name";
+	  echo "<a href = "">$name</a>";
 	  echo "<br/><br/> $about";
 	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
            
