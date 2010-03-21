@@ -35,7 +35,7 @@ echo "Time: ".$time."<br>";
 $query = "SELECT events.name, events.date, events.time, venues.name
 FROM events
 INNER JOIN venues
-ON events.venue_id = venues.venue_id, AND events.event_id = $id;";
+ON events.venue_id = venues.venue_id WHERE events.event_id = $id";
  
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
@@ -50,7 +50,7 @@ echo "<a href = venuepage.php?id=$venue_id>$name</a><br/>";
 $query = "SELECT bandinfo.name
 FROM bandinfo
 INNER JOIN events
-ON events.band_id1 = bandinfo.band_id, AND events.event_id = $id;";
+ON events.band_id1 = bandinfo.band_id WHERE events.event_id = $id;";
  
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
@@ -65,7 +65,7 @@ echo "<a href = bandpage.php?id=$band1>$name1</a><br/>";
 $query = "SELECT bandinfo.name
 FROM bandinfo
 INNER JOIN events
-ON events.band_id2 = bandinfo.band_id, AND events.event_id = $id;";
+ON events.band_id2 = bandinfo.band_id WHERE events.event_id = $id;";
  
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
@@ -83,7 +83,7 @@ if($band2 != 0)
 $query = "SELECT bandinfo.name
 FROM bandinfo
 INNER JOIN events
-ON events.band_id3 = bandinfo.band_id, AND events.event_id = $id;";
+ON events.band_id3 = bandinfo.band_id WHERE events.event_id = $id;";
  
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
