@@ -1,9 +1,3 @@
-<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
-<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-<font size="5" color="<?php echo($headingtext); ?>"><b>Create User</b></font>
-</td></tr>
-<tr bgcolor="white"><td align="left">
-
 <?php
 	include "db_connect.php";
 	
@@ -30,12 +24,20 @@
 $new_user = true;
 $url = 'index.php?page=login.php?new_user=$new_user';
                    header("Location: $url"); 
+                   exit;
+?>
+<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
+<font size="5" color="<?php echo($headingtext); ?>"><b>Create User</b></font>
+</td></tr>
+<tr bgcolor="white"><td align="left">
+<?php
         //	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 
                 echo "<p><a href=\"index.php?page=login.php\">Continue</a></p>";
         }else{
                 echo "<p>User name is already in use please choose another.</p>";
-                echo  "<p><a href=\"create_user.php\">Continue</a></p>";
+                echo  "<p><a href=\"index.php?page=create_user.php\">Continue</a></p>";
        	}
 ?>
 <br />
