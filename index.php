@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(is_file("install.php"))
+if(file_exists("install.php"))
 {
-include("install.php");
-exit;
+$url = 'install.php';
+header("Location: $url");
 }
 include("settings.php");
 include "db_connect.php";
@@ -94,6 +94,7 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 } else {
 	include("maintable.php");
 }
+//}
 ?>
 
 </td>
