@@ -1,6 +1,6 @@
 <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
 <tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-<font size="5" color="<?php echo($headingtext); ?>"><b>Edit Band</b></font>
+<font size="5" color="<?php echo($headingtext); ?>"><b>Band Editing</b></font>
 </td></tr>
 <tr bgcolor="white"><td align="center">
 	<div id="contents">
@@ -17,11 +17,11 @@
 				$state = $row['state'];
 				$image = $row['image'];
 				$genre = $row['genre'];
-				$about = $row['about'];
 				$members = $row['members'];
 			}
         	?>
 
+  		<h1>Edit Band Information</h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_band.php">
     		
 		<input type="hidden" name="band_id" value="<?php echo $band_id ?>"  />
@@ -43,9 +43,6 @@
 
     		<label for="band_members">Band Members:</label>
     		<input type="text" id="band_members" name="band_members" value="<?php echo $members ?>" /><br/>
-
-    		<label for="about">Band Bio:</label>
-    		<textarea id="about" name="about"><?php echo $about ?></textarea><br/>
 
     		<label for="image">Select a Picture file:</label>
     		<input type="file" id="image" name="image" value="<?php echo $image ?>" /><br/>
