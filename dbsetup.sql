@@ -88,7 +88,10 @@ CREATE TABLE IF NOT EXISTS `venues` (
 INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `city`, `state`, `image`, `about`, `map`) VALUES
 (1, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', '', NULL, NULL),
 (2, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', '', NULL, NULL);
-
+(3, 'Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', '', NULL, NULL);
+(4, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', '', NULL, NULL);
+(5, 'Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', '', NULL, NULL);
+(6, 'The Griffin, '', 'Fredericksburg', 'VA', '', NULL, NULL);
 --
 -- Table structure for table `records`
 --
@@ -100,7 +103,6 @@ CREATE TABLE IF NOT EXISTS `records` (
   PRIMARY KEY (`record_id`),
   KEY `id` (`id`,`venue_id`,`time`)
 );
-
 
 --
 -- Table structure for table `login`
