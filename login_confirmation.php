@@ -21,7 +21,11 @@
 
 			echo "<p><a href='index.php?page=login.php'>Log In</a></p>";
                 }else{
-			echo "<p>Thanks for logging in, $name</p>\n";
+
+			$SESSION_['user_name'] = $name;
+			$SESSION_['password'] = $pw;
+
+			echo "<p>Thanks for logging in, {$SESSION_['user_name']}</p>\n";
 			echo "<p><a href='index.php'>Continue</a></p>";
                 }
         ?>

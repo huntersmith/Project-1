@@ -57,7 +57,17 @@ function buildnav($number,$link) {
 </td></tr>
 
 <tr><td colspan="3" align="right">
-<a href="index.php?page=login.php"><font size="2" color="white"><b>Login</b></font></a> <font size="2" color="white">|</font> <a href="index.php?page=create_user.php"><font size="2" color="white"><b>New User</b></font></a>
+<?php
+if(isset($_SESSION['user_name'])) {
+?>
+<a href="index.php?page=logout.php"><font size="2" color="white"><b>Logout</b></font></a>
+<?php
+} else {
+?>
+<a href="index.php?page=login.php"><font size="2" color="white"><b>Login</b></font></a>
+<font size="2" color="white">|</font>
+<a href="index.php?page=create_user.php"><font size="2" color="white"><b>New User</b></font></a>
+<?php } ?>
 <br /><br />
 </td></tr>
 
