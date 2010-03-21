@@ -33,13 +33,13 @@ echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Band Members: <
 echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Address: </b></font></font>".$street_address.", ".$city.", ".$state."</P>";
 echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Genres: </b></font></font>".$genre."</P>";
 
-echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Albumns: </b></font></font></P>";
+echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Albums: </b></font></font></P>";
 echo "<ul>";
 $query = "SELECT records.name
 FROM records
 INNER JOIN bandinfo
-ON records.band_id = bandinfo.band_id;";
- 
+ON records.band_id = bandinfo.band_id WHERE bandinfo.band_id = $id;"; 
+
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
 
