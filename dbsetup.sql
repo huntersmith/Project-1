@@ -11,7 +11,7 @@ USE bands;
 -- Table structure for table `bandinfo`
 --
 
-CREATE TABLE IF NOT EXISTS `bandinfo` (
+CREATE TABLE IF NOT EXISTS `bands`.`bandinfo` (
   `band_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `street_address` varchar(50) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `bandinfo` (
 -- Dumping data for table `bandinfo`
 --
 
-INSERT INTO `bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
+INSERT INTO `bands`.`bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
 (NULL, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', 'default.jpeg', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
 (NULL, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', 'default.jpeg', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan'),
 (NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','beatles_abbey-road.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'),
