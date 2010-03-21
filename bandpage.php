@@ -23,18 +23,18 @@ $name = $row['name'];
 $street_address = $row['street_address'];
 $city = $row['city'];
 $state = $row['state'];
-$about = $row['about'];
-$shows = $row['shows'];
+$image = $row['image'];
+$genre = $row['genre'];
 $band_members = $row['members'];
 }
-echo "Band Name: ".$name."<br>";
-echo "Band Members: ".$band_members."<br>";
-echo "Address: ".$street_address.", ".$city.", ".$state."<br>";
-echo "Description: ".$about."<br>";
+echo "<br><br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
+echo "<br><P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Band Name: </b></font></font>".$name."</P>";
+echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Band Members: </b></font></font>".$band_members."</P>";
+echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Address: </b></font></font>".$street_address.", ".$city.", ".$state."</P>";
+echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Genres: </b></font></font>".$genre."</P>";
 
-echo "<a href='index.php?page=band_editing.php&id=$id'>Edit this Band</a>";
+echo "<a href='band_editing.php?id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
 
-//echo "<a href = 'band_editing.php?id=$id>Edit this Band</a>";
 ?>
 
 <br />

@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `bandinfo` (
 INSERT INTO `bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
 (NULL, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', 'default.jpeg', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
 (NULL, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', 'default.jpeg', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan'),
-(NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','default.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'),
+(NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','beatles_abbey-road.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'),
 (NULL, 'Blue', '333 SW 1st St', 'Afton', 'OK', 'default.jpeg', 'Techno', NULL, 'Linda, Jessica, Dan'),
 (NULL, 'Sunshine', '270 Charles St', 'Fredericksburg', 'VA', 'default.jpeg', 'Pop', NULL, 'Elizabeth, Ben, Zac'),
 (NULL, 'The Judges','200 UCLA Medical Plaza', 'Los Angeles', 'CA', 'default.jpeg', 'Heavy metal', NULL, 'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews'),
@@ -57,9 +57,11 @@ CREATE TABLE IF NOT EXISTS `events` (
   `band_id3` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`event_id`)
 );
-(NULL, 'Summer Fun', '1', '2010-02-24','22:30:00','1','2','3');
-(NULL, 'Event 2', '2', '2010-03-14','10:45:00','4','5','6');
-(NULL, 'Winter Time', '3', '2010-01-15','21:30:00','7','8','9');
+INSERT INTO `events` (`event_id`, `name`, `venue_id`, `date`, `time`, `band_id1`, `band_id2`, `band_id3`)
+VALUES
+(NULL, 'Summer Fun', '1', '2010-02-24','22:30:00','1','2','3'),
+(NULL, 'Event 2', '2', '2010-03-14','10:45:00','4','5','6'),
+(NULL, 'Winter Time', '3', '2010-01-15','21:30:00','7','8','9'),
 (NULL, 'Event 26', '4', '2010-05-16','20:00:00','1','4','7');
 
 --
