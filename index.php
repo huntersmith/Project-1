@@ -101,6 +101,10 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 <?php
 include("searchbar.php");
 ?>
+<?php
+include("footer.php");
+?>
+
 </td></tr>
 
 </table>

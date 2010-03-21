@@ -38,8 +38,8 @@ echo "<ul>";
 $query = "SELECT records.name
 FROM records
 INNER JOIN bandinfo
-ON records.band_id = bandinfo.band_id;";
- 
+ON records.band_id = bandinfo.band_id WHERE bandinfo.band_id = $id;"; 
+
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
 
@@ -49,7 +49,7 @@ echo "<li>$name</li>";
 }
 echo "</ul>";
 
-echo "<a href='band_editing.php?id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
+echo "<a href='index.php?page=band_editing.php&id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
 
 ?>
 

@@ -1,6 +1,6 @@
 <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
 <tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-<font size="5" color="<?php echo($headingtext); ?>"><b>Band Editing</b></font>
+<font size="5" color="<?php echo($headingtext); ?>"><b>Edit Band</b></font>
 </td></tr>
 <tr bgcolor="white"><td align="center">
 	<div id="contents">
@@ -22,7 +22,6 @@
 			}
         	?>
 
-  		<h1>Edit Band Information</h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_band.php">
     		
 		<input type="hidden" name="band_id" value="<?php echo $band_id ?>"  />
