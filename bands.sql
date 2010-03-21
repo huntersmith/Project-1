@@ -7,7 +7,7 @@
 -- Server version: 5.1.42
 -- PHP Version: 5.2.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+-- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -24,13 +24,13 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `records`
 --
 
-CREATE TABLE IF NOT EXISTS `records` (
-  `band_id` int(11) NOT NULL,
-  `album` varchar(50) NOT NULL,
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`),
-  KEY `band_id` (`band_id`,`album`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+-- CREATE TABLE IF NOT EXISTS `records` (
+--   `band_id` int(11) NOT NULL,
+--   `album` varchar(50) NOT NULL,
+--   `id` int(11) NOT NULL AUTO_INCREMENT,
+--   PRIMARY KEY (`id`),
+--   KEY `band_id` (`band_id`,`album`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `records`
