@@ -1,14 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>User Created</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-<div id="wrap">
-<div id="main">
+<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
+<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
+<font size="5" color="<?php echo($headingtext); ?>"><b>Create User</b></font>
+</td></tr>
+<tr bgcolor="white"><td align="left">
+
 <?php
 	include "db_connect.php";
 	
@@ -43,6 +38,6 @@ $url = 'index.php?page=login.php?new_user=$new_user';
                 echo  "<p><a href=\"create_user.php\">Continue</a></p>";
        	}
 ?>
-</div>
-</body>
-</html>
+<br />
+</td></tr>
+</table>
