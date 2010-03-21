@@ -28,16 +28,16 @@ CREATE TABLE IF NOT EXISTS `bandinfo` (
 -- Dumping data for table `bandinfo`
 --
 
-INSERT INTO `bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
-(1, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', '', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
-(2, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', '', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan');
-(3, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star');
-(4,'Blue', '333 SW 1st St', 'Afton', 'OK','', 'Techno', NULL, 'Linda, Jessica, Dan');
-(5, 'Sunshine', '270', 'Charles St', 'Fredericksburg', 'VA','','Pop',NULL,'Elizabeth, Ben, Zac');
-(6, 'The Judges','200', 'UCLA Medical Plaza', 'Los Angeles', 'CA','','Heavy metal',NULL,'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews');
-(7,'Led Zeppelin','501', 'University Avenue','Fort Collins', 'CO','','Rock',NULL,'Jimmy Page, John Paul Jones, Robert Plant, John Bonham');
-(9,'Pink Floyd', '147', 'Shenango Avenue', 'Sharon', 'PA','','Rock',NULL,'Syd Barrett, David Gilmour, Bob Klose, Nick Mason, Roger Waters, Richard Wright');
-(10, 'The Beach Boys','75', '3rd Avenue', 'New York', 'NY','','Sunshine Pop',NULL, 'Al Jardine, Bruce Johnston, Mike Love, Brian Wilson');
+INSERT INTO `bandinfo` (`name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
+('Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', '', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
+('Another Test', '1302 Street Ln', 'Alexandria', 'VA', '', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan');
+('The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star');
+('Blue', '333 SW 1st St', 'Afton', 'OK','', 'Techno', NULL, 'Linda, Jessica, Dan');
+('Sunshine', '270', 'Charles St', 'Fredericksburg', 'VA','','Pop',NULL,'Elizabeth, Ben, Zac');
+('The Judges','200', 'UCLA Medical Plaza', 'Los Angeles', 'CA','','Heavy metal',NULL,'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews');
+('Led Zeppelin','501', 'University Avenue','Fort Collins', 'CO','','Rock',NULL,'Jimmy Page, John Paul Jones, Robert Plant, John Bonham');
+('Pink Floyd', '147', 'Shenango Avenue', 'Sharon', 'PA','','Rock',NULL,'Syd Barrett, David Gilmour, Bob Klose, Nick Mason, Roger Waters, Richard Wright');
+('The Beach Boys','75', '3rd Avenue', 'New York', 'NY','','Sunshine Pop',NULL, 'Al Jardine, Bruce Johnston, Mike Love, Brian Wilson');
 
 
 -- --------------------------------------------------------
@@ -85,13 +85,13 @@ CREATE TABLE IF NOT EXISTS `venues` (
 -- Dumping data for table `venues`
 --
 
-INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `city`, `state`, `image`, `about`, `map`) VALUES
-(1, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', '', NULL, NULL),
-(2, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', '', NULL, NULL);
-(3, 'Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', '', NULL, NULL);
-(4, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', '', NULL, NULL);
-(5, 'Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', '', NULL, NULL);
-(6, 'The Griffin, '', 'Fredericksburg', 'VA', '', NULL, NULL);
+INSERT INTO `venues` (`name`, `street_address`, `city`, `state`, `image`, `about`, `map`) VALUES
+('Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', '', NULL, NULL),
+('Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', '', NULL, NULL);
+('Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', '', NULL, NULL);
+('The Underground', '1301 College Ave', 'Fredericksburg', 'VA', '', NULL, NULL);
+('Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', '', NULL, NULL);
+('The Griffin, '', 'Fredericksburg', 'VA', '', NULL, NULL);
 --
 -- Table structure for table `records`
 --

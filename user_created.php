@@ -25,7 +25,7 @@
 	$confirmation = mysqli_num_rows($result);
 
         if ($confirmation == 0){
-		$userInfo = "INSERT INTO login(username, password, firstname, lastname, email) VALUES ('$user_name', '$password', '$first_name', '$last_name', '$email');";
+		$userInfo = "INSERT INTO login(username, password, firstname, lastname, email) VALUES ('$user_name', SHA('$password'), '$first_name', '$last_name', '$email');";
 		$result = mysqli_query($db, $userInfo);
         	echo "<p>Your user name and password has been set. Please follow the shown link to log in.</p>";
 

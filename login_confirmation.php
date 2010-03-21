@@ -10,7 +10,7 @@
                 $name = $_POST['user_name'];
                 $pw = $_POST['password'];
 
-                $query = "select * from login WHERE username = '$name' AND password = '$pw';";
+                $query = "select * from login WHERE username = '$name' AND password = SHA('$pw');";
                 $result = mysqli_query($db, $query)
                         or die("Error querying database.");
 
@@ -21,11 +21,8 @@
 
                         echo "<p><a href='index.php'>Continue</a></p>";
                 }else{
-                        echo "<p>Incorrect username or password</p>\n";
-                        echo  "<h1>Log In</h1>\n  <form method=\"post\" action=\"login.php\">";
-                        echo "<label for=\"username\">Username:</label><input type=\"text\" id=\"username\" name=\"username\" /><br />";
-                        echo "<label for=\"pw\">Password:</label><input type=\"password\" id=\"pw\" name=\"pw\" /><br />";
-                        echo "<input type=\"submit\" value=\"Login\" name=\"submit\" /></form> <p><a href=\"create_user.php\">Create Account</a></p>";
+                        echo "<p>Incorrect username or password. Please try again by clicking the link below.</p>\n";
+                        echo "<p><a href='index.php?page=login.php'>Log In</a></p>";
                 }
         ?>
         </div>
