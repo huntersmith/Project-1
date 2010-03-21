@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `band_id3` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`event_id`)
 );
-INSERT INTO `events` (`event_id`, `name`, `venue_id`, `date`, `time`, `band_id1`, `band_id2`, `band_id3`);
+INSERT INTO `events` (`event_id`, `name`, `venue_id`, `date`, `time`, `band_id1`, `band_id2`, `band_id3`)
 VALUES
 (NULL, 'Summer Fun', '1', '2010-02-24','22:30:00','1','2','3'),
 (NULL, 'Event 2', '2', '2010-03-14','10:45:00','4','5','6'),
