@@ -20,7 +20,7 @@ $query = "SELECT name, date, time, event_id FROM events";
 	$id = $row['event_id'];
 
       echo "<table style = \"width: 300px;\"/></>";
-  	echo "<td><a href='eventpage.php?id=$id'>$name</a></td></tr><br/>";
+  	echo "<td><a href='index.php?page=eventpage.php&id=$id'>$name</a></td></tr><br/>";
 	echo "<tr><td>$date</td>";
 	echo "<tr><td>$time</td>";
 }
