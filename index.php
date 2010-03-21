@@ -41,7 +41,7 @@ function buildnav($number,$link) {
 	<tr">
 	<?php
 	echo(buildnav(1, "index.php"));
-	echo(buildnav(2, "band_list.php"));
+	echo(buildnav(2, "index.php?page=band_list.php"));
 	echo(buildnav(3, "index.php?page=band_entry.html"));
 	echo(buildnav(4, "index.php?page=venue_entry.html"));
 	echo(buildnav(5, "index.php?page=event_entry.php"));

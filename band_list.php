@@ -21,13 +21,14 @@ $query = "SELECT name, image, band_id FROM $table";
 
       echo "<table style = \"width: 300px;\"/></>";
 	echo "<tr><td><img src =\"$image\" style = \"width: 100px; height: 75px;\"/></td>";
-  	echo "<td><a href='bandpage.php?id=$id'>$name</a></td></tr><br/>";
+  	echo "<td><a href='index.php?page=bandpage.php&id=$id'>$name</a></td></tr><br/>";
 }
   
   mysqli_close($db);
 
 ?>
 
+</table>
 <br/>
 
 
@@ -38,6 +39,3 @@ $query = "SELECT name, image, band_id FROM $table";
 <br />
 </td></tr>
 </table>
-<br />
-<br />
-<a href='index.php'>Back to Main Page</a>
