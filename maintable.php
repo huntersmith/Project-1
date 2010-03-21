@@ -12,9 +12,9 @@
 	  $name = $row['name'];
 	  $about = $row['about'];
 	  $image = $row['image'];
-	  $
+	  $id = $row['band_id'];
 
-	  echo "<a href = "">$name</a>";
+	  echo "<a href ='index.php?page=bandpage.php&id=$id'>$name</a>";
 	  echo "<br/><br/> $about";
 	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
            
@@ -29,8 +29,9 @@
 	  $name = $row['name'];
 	  $about = $row['about'];
 	  $image = $row['image'];
+	  $id = $row['venue_id'];
 
-	  echo "$name";
+	  echo "<a href='index.php?page=venuepage.php&id=$id'>$name</a>";
 	  echo "<br/><br/> $about";
 	  echo "<br/><br/> <img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
            mysqli_close($db);
