@@ -1,12 +1,12 @@
 <?php
 session_start();
-if(!(mysql_query("SELECT * FROM bands")))
+/*if(!(mysql_query("SELECT * FROM bands")))
 {
 $url = 'install.php';
 header("Location: $url");
 }
 else
-{
+{*/
 include("settings.php");
 include "db_connect.php";
 
@@ -96,7 +96,7 @@ if(isset($_GET['page']) && $_GET['page'] != "" && $_GET['page'] != "index.php") 
 } else {
 	include("maintable.php");
 }
-}
+//}
 ?>
 
 </td>
