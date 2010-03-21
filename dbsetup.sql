@@ -59,9 +59,9 @@ CREATE TABLE IF NOT EXISTS `events` (
 );
 INSERT INTO `events` (`event_id`, `name`, `venue_id`, `date`, `time`, `band_id1`, `band_id2`, `band_id3`);
 VALUES
-(NULL, 'Summer Fun', '1', '2010-02-24','22:30:00','1','2','3');
-(NULL, 'Event 2', '2', '2010-03-14','10:45:00','4','5','6');
-(NULL, 'Winter Time', '3', '2010-01-15','21:30:00','7','8','9');
+(NULL, 'Summer Fun', '1', '2010-02-24','22:30:00','1','2','3'),
+(NULL, 'Event 2', '2', '2010-03-14','10:45:00','4','5','6'),
+(NULL, 'Winter Time', '3', '2010-01-15','21:30:00','7','8','9'),
 (NULL, 'Event 26', '4', '2010-05-16','20:00:00','1','4','7');
 
 --
