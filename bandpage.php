@@ -34,7 +34,7 @@ echo "Description: ".$about."<br>";
 
 echo "<a href='band_editing.php?id=$id'>Edit this Band</a>";
 
-echo "<a href = 'band_editing.php?id=$id>Edit this Band</a>";
+//echo "<a href = 'band_editing.php?id=$id>Edit this Band</a>";
 ?>
 
 <br />
