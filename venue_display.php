@@ -30,8 +30,8 @@ while($row = mysqli_fetch_array($result)) {
 		$map = 'http://maps.google.com/maps?f=q&source=s_q&hl=en&q='.urlencode($street_address.' '.$city.' '.$state);
 		
 		echo "
-		<h1>$venue</h1>
-		<!--<img src='$pic' alt='$venue'/>-->
+		<h1><a href='index.php?page=venuepage.php&id=$venue_id'>$venue</a></h1>";
+	echo"	<!--<img src='$pic' alt='$venue'/>-->
 		<p>Location: <br/>$street_address <br/> $city, $state </p>
 		<p> $about </p>
 		<a href='$map'>Need a map?</a>
