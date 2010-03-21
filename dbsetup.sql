@@ -102,14 +102,32 @@ INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `city`, `state`, `im
 -- Table structure for table `records`
 --
 CREATE TABLE IF NOT EXISTS `records` (
-  `id` int(11) NOT NULL,
-  `venue_id` int(11) NOT NULL,
-  `time` datetime NOT NULL,
-  `record_id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`record_id`),
-  KEY `id` (`id`,`venue_id`,`time`)
+  `record_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(50) NOT NULL,
+  `releaseDate` DATE NOT NULL,
+  'band_id' smallint(6) NOT NULL,
+  CONSTRAINT bandinfo_band_id_fk
+  FOREIGN KEY (`band_id`)
+  REFERENCES bandinfo (`band_id`)
 );
 
+--
+-- Dumping data for table `records`
+--
+INSERT INTO `records` (`record_id`, `name`, `releaseDate`, `band_id`) VALUES
+(NULL, 'Introducing... the Beatles', '1964-01-10', 3),
+(NULL, 'The Beatles\' Second Album', '1964-04-10', 3),
+(NULL, 'Something New', '1964-07-20', 3),
+(NULL, 'The Beatles Story', '1964-11-23', 3),
+(NULL, 'Beatles 65', '1964-12-15', 3),
+(NULL, 'The Early Beatles', '1965-03-22', 3),
+(NULL, 'Surfin Safari', '1962-10-01', 9),
+(NULL, 'Surfin USA', '1963-03-25', 9),
+(NULL, 'Surfer Girl', '1963-09-16', 9),
+(NULL, 'Led Zeppelin', '1969-01-12', 7),
+(NULL, 'Led Zeppelin II', '1969-10-22', 7),
+(NULL, 'Led Zeppelin III', '1970-10-05', 7),
+(NULL, 'Led Zeppelin IV', '1971-11-08', 7);
 --
 -- Table structure for table `login`
 --
