@@ -13,10 +13,15 @@
 	include "db_connect.php";
 	
 	$first_name = mysqli_real_escape_string($db, trim($_POST['first_name']));
+
 	$last_name = mysqli_real_escape_string($db, trim($_POST['last_name']));
+
 	$user_name = mysqli_real_escape_string($db, trim($_POST['user_name']));
+
 	$email = mysqli_real_escape_string($db, trim($_POST['email']));
+
 	$password = mysqli_real_escape_string($db, trim($_POST['password']));
+
 
         $query = "SELECT * FROM login WHERE username = '$user_name';";
         $result = mysqli_query($db, $query)
