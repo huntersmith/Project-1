@@ -22,10 +22,10 @@
 			echo "<p><a href='index.php?page=login.php'>Log In</a></p>";
                 }else{
 
-			$SESSION_['user_name'] = $name;
-			$SESSION_['password'] = $pw;
+			$_SESSION['user_name'] = $name;
+			$_SESSION['password'] = $pw;
 
-			echo "<p>Thanks for logging in, {$SESSION_['user_name']}</p>\n";
+			echo "<p>Thanks for logging in, {$_SESSION['user_name']}</p>\n";
 			echo "<p><a href='index.php'>Continue</a></p>";
                 }
         ?>

@@ -23,13 +23,14 @@ while($row = mysqli_fetch_array($result)) {
 		$state = $row['state'];
 		$pic = $row['image'];
 		$about = $row['about'];
+		$image = $row['image'];
 		$map = $row['map'];
 		
 		$map = 'http://maps.google.com/maps?f=q&source=s_q&hl=en&q='.urlencode($street_address.' '.$city.' '.$state);
 		
 		echo "
 		<h1>$venue</h1>
-		<!--<img src='$pic' alt='$venue'/>-->
+		<br><br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>
 		<p>Location: <br/>$street_address <br/> $city, $state </p>
 		<p> $about </p>
 		<a href='$map'>Need a map?</a>
