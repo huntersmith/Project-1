@@ -35,7 +35,7 @@ echo "Time: ".$time."<br>";
 $query = "SELECT events.name, events.date, events.time, venues.name
 FROM events
 INNER JOIN venues
-ON events.venue_id = venues.venue_id, AND events.event_id = $id;
+ON events.venue_id = venues.venue_id, AND events.event_id = $id;";
  
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
