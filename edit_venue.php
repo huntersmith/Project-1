@@ -19,13 +19,19 @@ $state = $_POST['state'];
 $image = $_POST['image'];
 $about = $_POST['about'];
 
+$filename = $_FILES['image']['name'];
+     
+$target ="$filename";
+
+move_uploaded_file($_FILES['image']['tmp_name'], $target);
+
 $query = "UPDATE venues
 SET
 name='$name',
 street_address='$street_address',
 city='$city',
 state='$state',
-image='$image',
+image='$target',
 about='$about'
 WHERE venue_id='$venue_id';";
 
