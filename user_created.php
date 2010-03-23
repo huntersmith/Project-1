@@ -22,8 +22,8 @@
 		$userInfo = "INSERT INTO login(username, password, firstname, lastname, email) VALUES ('$user_name', SHA('$password'), '$first_name', '$last_name', '$email');";
 		$result = mysqli_query($db, $userInfo);
 $new_user = true;
-$url = 'index.php?page=login.php?new_user=$new_user';
-                   header("Location: $url"); 
+$url = 'index.php?page=login.php&new_user='.$new_user;
+                   echo('<meta http-equiv="refresh" content="0;url='.$url.'">'); 
                    exit;
 ?>
 <table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
