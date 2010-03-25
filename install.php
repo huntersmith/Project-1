@@ -1,5 +1,3 @@
-<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
-<tr bgcolor="white"><td align="left">
 <?php
 if(isset($_POST['create']))
 {
@@ -120,6 +118,8 @@ header("Location: $url");
 exit;
 }
 ?>
+<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="white"><td align="left">
 <html>
 <head>
 <title> Band Set up page </title>
