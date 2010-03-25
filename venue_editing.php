@@ -1,6 +1,6 @@
-<table border="1" bordercolor="white" cellpadding="5" cellspacing="0" width="100%">
-<tr bgcolor="<?php echo($cellbg); ?>"><td align="center">
-<font size="5" color="<?php echo($headingtext); ?>"><b>Venue Editing</b></font>
+<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="white"><td align="center">
+<img border="0" src="title_editvenue.jpg">
 </td></tr>
 <tr bgcolor="white"><td align="center">
 
@@ -22,7 +22,6 @@
                         }
                 ?>
 
-  		<h1>Venue To Edit</h1>
 		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_venue.php">
     		<label for="name">Venue name:</label>
     		<input type="text" id="name" name="name" value="<?php echo $name ?>"  /><br/>

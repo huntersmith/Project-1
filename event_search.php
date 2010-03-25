@@ -1,6 +1,6 @@
 <table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
 <tr bgcolor="white"><td align="center">
-<img border="0" src="title_bsearchres.jpg">
+<img border="0" src="title_esearchres.jpg">
 </td></tr>
 <tr bgcolor="white"><td align="center">
 

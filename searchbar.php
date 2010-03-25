@@ -32,7 +32,7 @@
 
 	<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
 	<tr bgcolor="white"><td align="center">
-		<img border="0" src="title_vsearch.jpg">
+		<img border="0" src="title_esearch.jpg">
 	</td></tr>
 	<tr bgcolor="white"><td align="center">
 		<font size="2" color="black"><b>Enter an event to search:</b></font>
