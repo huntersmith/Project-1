@@ -1,10 +1,10 @@
 <?php
 session_start();
-/*if(file_exists("install.php"))
+if(file_exists("install.php"))
 {
 $url = 'install.php';
 header("Location: $url");
-}*/
+}
 include("settings.php");
 include "db_connect.php";
 
