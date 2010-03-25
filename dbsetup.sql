@@ -93,7 +93,7 @@ INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `city`, `state`, `im
 (NULL, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', 'greathall.jpg', NULL, NULL),
-(NULL, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
+(NULL, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', 'underground.jpg', NULL, NULL),
 (NULL, 'Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', 'Hyperion.JPG', NULL, NULL),
 (NULL, 'The Griffin', '723 Caroline St', 'Fredericksburg', 'VA', 'griffin.jpg', NULL, NULL);
 --
