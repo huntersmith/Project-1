@@ -24,8 +24,6 @@ $venue_id = $row['venue_id'];
 $date = $row['date'];
 $time = $row['time'];
 $band1 = $row['band_id1'];
-$band2 = $row['band_id2'];
-$band3 = $row['band_id3'];
 }
 
 echo "Event Name: ".$name."<br>";
@@ -59,9 +57,9 @@ while($row = mysqli_fetch_array($result)) {
 $name1 = $row['name'];
 }
 
-echo "Band 1: ";
+echo "Band: ";
 echo "<a href = index.php?page=bandpage.php&id=$band1>$name1</a><br/>";
-
+/*
 $query = "SELECT bandinfo.name
 FROM bandinfo
 INNER JOIN events
@@ -98,7 +96,7 @@ if($band3 != 0)
 	echo "<a href = index.php?page=bandpage.php&id=$band3>$name3</a><br/>";
 }
 
-
+*/
 ?>
 
 <br />
