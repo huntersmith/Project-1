@@ -49,7 +49,7 @@
        ?>
 </select>
 <br />
-<label for="band2">Band 2:</label>
+<!--<label for="band2">Band 2:</label>
     <select name = "band2">
 	<option>None</option>
 	<?php
@@ -83,7 +83,7 @@
       mysqli_close($db);
      ?>
 </select>
-      
+      -->
 <br/>
    
 
