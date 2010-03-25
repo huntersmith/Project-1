@@ -30,7 +30,7 @@ echo "<table boarder =1>";
 		$time = $row['time'];
 		
 echo "
-<b><h1><font color = 'blue'><a href='eventpage.php?id=$id'>$name</a></font><h1></a></h1></b>
+<b><h1><font color = 'blue'><a href='index.php?page=eventpage.php&id=$id'>$name</a></font><h1></a></h1></b>
 <tr>
 <p><font size = '5'><b>Date: </b></font>$date </p>
 <p><font size = '5'><b>Time: </b></font>$time </p>
