@@ -31,16 +31,16 @@ mysqli_query($db,"CREATE TABLE IF NOT EXISTS `bandinfo` (
 )");
 
 
-mysqli_query($db,"INSERT INTO `bands`.`bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES
-(NULL, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', 'default.jpeg', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'),
-(NULL, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', 'default.jpeg', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan'),
-(NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD','beatles_abbey-road.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'),
-(NULL, 'Blue', '333 SW 1st St', 'Afton', 'OK', 'default.jpeg', 'Techno', NULL, 'Linda, Jessica, Dan'),
-(NULL, 'Sunshine', '270 Charles St', 'Fredericksburg', 'VA', 'default.jpeg', 'Pop', NULL, 'Elizabeth, Ben, Zac'),
-(NULL, 'The Judges','200 UCLA Medical Plaza', 'Los Angeles', 'CA', 'default.jpeg', 'Heavy metal', NULL, 'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews'),
-(NULL, 'Led Zeppelin','501 University Avenue','Fort Collins', 'CO', 'default.jpeg', 'Rock', NULL, 'Jimmy Page, John Paul Jones, Robert Plant, John Bonham'),
-(NULL, 'Pink Floyd', '147 Shenango Avenue', 'Sharon', 'PA', 'default.jpeg', 'Rock', NULL, 'Syd Barrett, David Gilmour, Bob Klose, Nick Mason, Roger Waters, Richard Wright'),
-(NULL, 'The Beach Boys','75 3rd Avenue', 'New York', 'NY', 'default.jpeg', 'Sunshine Pop', NULL, 'Al Jardine, Bruce Johnston, Mike Love, Brian Wilson')");
+mysqli_query($db,"INSERT INTO `bands`.`bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES 
+(NULL, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', 'default.jpeg', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'), 
+(NULL, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', 'default.jpeg', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan'), 
+(NULL, 'The Beatles', '465 Rosebud Ave', 'Gregory', 'SD', 'beatles_abbey-road.jpeg', 'Rock and Roll', NULL, 'John Lennon, Paul McCartney, George Harrison, Ringo Star'), 
+(NULL, 'Blue', '333 SW 1st St', 'Afton', 'OK', 'default.jpeg', 'Techno', NULL, 'Linda, Jessica, Dan'), 
+(NULL, 'Sunshine', '270 Charles St', 'Fredericksburg', 'VA', 'default.jpeg', 'Pop', NULL, 'Elizabeth, Ben, Zac'), 
+(NULL, 'The Judges','200 UCLA Medical Plaza', 'Los Angeles', 'CA', 'default.jpeg', 'Heavy metal', NULL, 'Jack Sonni, Ken Lopez, Howard Schilling, Charles Andrews'), 
+(NULL, 'Led Zeppelin','501 University Avenue','Fort Collins', 'CO', 'default.jpeg', 'Rock', NULL, 'Jimmy Page, John Paul Jones, Robert Plant, John Bonham'), 
+(NULL, 'Pink Floyd', '147 Shenango Avenue', 'Sharon', 'PA', 'default.jpeg', 'Rock', NULL, 'Syd Barrett, David Gilmour, Bob Klose, Nick Mason, Roger Waters, Richard Wright'), 
+(NULL, 'The Beach Boys','75 3rd Avenue', 'New York', 'NY', 'default.jpeg', 'Sunshine Pop', NULL, 'Al Jardine, Bruce Johnston, Mike Love, Brian Wilson');");
 
 
 mysqli_query($db,"CREATE TABLE IF NOT EXISTS `events` (
@@ -75,7 +75,7 @@ mysqli_query($db,"INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `c
 (NULL, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Great Hall', '1301 College Ave', 'Fredericksburg', 'VA', 'greathall.jpg', NULL, NULL),
-(NULL, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
+(NULL, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', 'underground.jpg', NULL, NULL),
 (NULL, 'Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', 'Hyperion.JPG', NULL, NULL),
 (NULL, 'The Griffin', '723 Caroline St', 'Fredericksburg', 'VA', 'griffin.jpg', NULL, NULL)");
 
