@@ -3,7 +3,7 @@
 <?php
 if(isset($_POST['create']))
 {
-
+ 
 $root = $_POST['root'];
 $pw = $_POST['pw'];
 $db = mysqli_connect('localhost',$root,$pw);
@@ -11,12 +11,12 @@ if(!$db)
 die('Connect Error, did you enter the right information?');
 $db = mysqli_connect('localhost',$root,$pw);
 mysqli_query($db,"DROP DATABASE IF EXISTS bands");
-
+ 
 mysqli_query($db,"CREATE DATABASE IF NOT EXISTS bands");
 mysqli_query($db,"GRANT ALL PRIVILEGES ON bands.* to 'banduser'@'localhost' identified by 'bands'");
-
+ 
 mysqli_select_db($db,"bands");
-
+ 
 mysqli_query($db,"CREATE TABLE IF NOT EXISTS `bandinfo` (
   `band_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -29,8 +29,8 @@ mysqli_query($db,"CREATE TABLE IF NOT EXISTS `bandinfo` (
   `members` varchar(100) NOT NULL,
   PRIMARY KEY (`band_id`)
 )");
-
-
+ 
+ 
 mysqli_query($db,"INSERT INTO `bands`.`bandinfo` (`band_id`, `name`, `street_address`, `city`, `state`, `image`, `genre`, `about`, `members`) VALUES 
 (NULL, 'Test Band', '1200 Anywhere St.', 'Fredericksburg', 'VA', 'default.jpeg', 'Country, Blue Grass', NULL, 'Bob, Jane, Sue, Alex'), 
 (NULL, 'Another Test', '1302 Street Ln', 'Alexandria', 'VA', 'default.jpeg', 'Pop, Rock', NULL, 'Jeff, Julie, Jordan'), 
@@ -41,8 +41,8 @@ mysqli_query($db,"INSERT INTO `bands`.`bandinfo` (`band_id`, `name`, `street_add
 (NULL, 'Led Zeppelin','501 University Avenue','Fort Collins', 'CO', 'default.jpeg', 'Rock', NULL, 'Jimmy Page, John Paul Jones, Robert Plant, John Bonham'), 
 (NULL, 'Pink Floyd', '147 Shenango Avenue', 'Sharon', 'PA', 'default.jpeg', 'Rock', NULL, 'Syd Barrett, David Gilmour, Bob Klose, Nick Mason, Roger Waters, Richard Wright'), 
 (NULL, 'The Beach Boys','75 3rd Avenue', 'New York', 'NY', 'default.jpeg', 'Sunshine Pop', NULL, 'Al Jardine, Bruce Johnston, Mike Love, Brian Wilson');");
-
-
+ 
+ 
 mysqli_query($db,"CREATE TABLE IF NOT EXISTS `events` (
   `event_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -58,7 +58,7 @@ VALUES
 (NULL, 'Event 2', '2', '2010-03-14','10:45:00','4'),
 (NULL, 'Winter Time', '3', '2010-01-15','21:30:00','7'),
 (NULL, 'Event 26', '4', '2010-05-16','20:00:00','1')");
-
+ 
 mysqli_query($db,"CREATE TABLE IF NOT EXISTS `venues` (
   `venue_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -70,7 +70,7 @@ mysqli_query($db,"CREATE TABLE IF NOT EXISTS `venues` (
   `map` blob,
   PRIMARY KEY (`venue_id`)
 )");
-
+ 
 mysqli_query($db,"INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `city`, `state`, `image`, `about`, `map`) VALUES
 (NULL, 'Best Club', '1 Awesome St.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
 (NULL, 'Another Club', '302 Amazing Rd.', 'Fredericksburg', 'VA', 'default.jpeg', NULL, NULL),
@@ -78,7 +78,7 @@ mysqli_query($db,"INSERT INTO `venues` (`venue_id`, `name`, `street_address`, `c
 (NULL, 'The Underground', '1301 College Ave', 'Fredericksburg', 'VA', 'underground.jpg', NULL, NULL),
 (NULL, 'Hyperion', '1200 Williams St', 'Fredericksburg', 'VA', 'Hyperion.JPG', NULL, NULL),
 (NULL, 'The Griffin', '723 Caroline St', 'Fredericksburg', 'VA', 'griffin.jpg', NULL, NULL)");
-
+ 
 mysqli_query($db,"CREATE TABLE IF NOT EXISTS `records` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(50) NOT NULL,
@@ -102,7 +102,7 @@ mysqli_query($db,"INSERT INTO `records` (`record_id`, `name`, `releaseDate`, `ba
 (NULL, 'Led Zeppelin II', '1969-10-22', 7),
 (NULL, 'Led Zeppelin III', '1970-10-05', 7),
 (NULL, 'Led Zeppelin IV', '1971-11-08', 7)");
-
+ 
 mysqli_query($db,"CREATE TABLE IF NOT EXISTS `login` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
@@ -112,7 +112,7 @@ mysqli_query($db,"CREATE TABLE IF NOT EXISTS `login` (
   `email` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
 )");
-
+ 
 if(file_exists("install.bak.php")) unlink("install.bak.php");
 rename("install.php","install.bak.php");
 $url = 'index.php';
