@@ -1,3 +1,5 @@
+<table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="white"><td align="left">
 <?php
 if(isset($_POST['create']))
 {
@@ -134,3 +136,5 @@ Enter Root Password: <input type="password" name="pw">
 </form>
 </body>
 </html>
+</td></tr>
+</table>
