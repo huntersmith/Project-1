@@ -1,3 +1,6 @@
+<?php
+include("mustlogin.php");
+?>
 <script type="text/javascript" src="datepickercontrol.js"></script>
 <link type="text/css" rel="stylesheet" href="datepickercontrol.css">
 

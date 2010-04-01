@@ -1,3 +1,6 @@
+<?php
+include("mustlogin.php");
+?>
 <table border="1" bordercolor="white" cellpadding="0" cellspacing="0" width="100%">
 <tr bgcolor="white"><td align="center">
 <img border="0" src="title_editband.jpg">
