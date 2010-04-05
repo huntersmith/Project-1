@@ -49,6 +49,21 @@ echo "<li>$name</li>";
 }
 echo "</ul>";
 
+echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Upcoming Events: </b></font></font>";
+
+$query = "SELECT e.event_id, e.name, e.date FROM events AS e INNER JOIN bandinfo AS b ON e.band_id1 = b.band_id WHERE b.band_id = $band;";
+
+$result = mysqli_query($db, $query)
+or die("Error Querying Database");
+
+while($row = mysqli_fetch_array($result))
+{
+	$id = $row['event_id'];
+	$name = $row['name'];
+	$date = $row['date'];
+	echo "<p><a href='index.php?page=eventpage.php&id=$id'>$name</a>" . "   " . "$date</p>";
+}
+
 echo "<a href='index.php?page=band_editing.php&id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
 
 ?>
