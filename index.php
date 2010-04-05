@@ -20,7 +20,7 @@ function buildnav($number,$link) {
 	<script type="text/javascript">
 		konami = new Konami()
 		konami.code = function() {
-			alert("You have entered the KONAMI CODE!  You now have 30 lives.  Kinda.")
+			alert("You now own the INTERWEBS!...Kinda.")
 		}
 
 		konami.load()
