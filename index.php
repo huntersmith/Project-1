@@ -15,6 +15,17 @@ function buildnav($number,$link) {
 
 ?>
 <HTML>
+<HEADER>
+	<script type="text/javascript" src="konami.js"></script>
+	<script type="text/javascript">
+		konami = new Konami()
+		konami.code = function() {
+			alert("You have entered the KONAMI CODE!  You now have 30 lives.  Kinda.")
+		}
+
+		konami.load()
+	</script>
+</HEADER>
 
 <style  TYPE="text/css">
     BODY {
