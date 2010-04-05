@@ -137,3 +137,10 @@ CREATE TABLE IF NOT EXISTS `login` (
   `email` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
 );
+
+
+CREATE TABLE IF NOT EXISTS `comments` (
+  `comment_id` smallint(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `band_id` smallint(6) NOT NULL,
+  `comment` blob NOT NULL
+);

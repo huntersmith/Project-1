@@ -64,6 +64,7 @@ while($row = mysqli_fetch_array($result))
 	echo "<p><a href='index.php?page=eventpage.php&id=$id'>$name</a>" . "   " . "$date</p>";
 }
 
+include "comments.php";
 echo "<a href='index.php?page=band_editing.php&id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
 
 ?>
