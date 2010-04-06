@@ -25,6 +25,20 @@ $target ="$filename";
 
 move_uploaded_file($_FILES['image']['tmp_name'], $target);
 
+if($image == '')
+{
+$query = "UPDATE bandinfo
+SET
+name='$name',
+street_address='$street_address',
+city='$city',
+state='$state',
+genre='$genre',
+about='$about',
+members='$members'
+WHERE band_id='$band_id';";
+}
+else{
 $query = "UPDATE bandinfo
 SET
 name='$name',
@@ -36,7 +50,7 @@ genre='$genre',
 about='$about',
 members='$members'
 WHERE band_id='$band_id';";
-
+}
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
 
