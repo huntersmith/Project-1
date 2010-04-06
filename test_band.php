@@ -55,7 +55,7 @@ $query = "SELECT * FROM $table WHERE name = '$name'";
       echo "<p>$city " . ", " . "$state</p>";
       echo "<p>$genre</p>";
       echo "<p>Members: $members</p>";
-	echo "<p>Bio: $about</p></div>";
+	echo "</div>";
       echo "<img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
   
   mysqli_close($db);

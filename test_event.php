@@ -53,7 +53,7 @@ $band_id3 = $row['band_id'];
 
   $query = "INSERT INTO events (name, venue_id, date, time, band_id1, band_id2, band_id3) VALUES ('$name', '$venue_id', '$date', '$time', '$band_id1', '$band_id2', '$band_id3')";
 */
-  $query = "INSERT INTO events (name, venue_id, date, time, band_id1, band_id2, band_id3) VALUES ('$name', '$venue_id', '$date', '$time', '$band_id1')";
+  $query = "INSERT INTO events (name, venue_id, date, time, band_id1) VALUES ('$name', '$venue_id', '$date', '$time', '$band_id1')";
   
 
   $result = mysqli_query($db, $query)

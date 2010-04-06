@@ -20,11 +20,13 @@ or die("Error Querying Database");
 while($row = mysqli_fetch_array($result)) {
 $id = $row['band_id'];
 $name = $row['name'];
+$BANDNAME = $row['name'];
 $street_address = $row['street_address'];
 $city = $row['city'];
 $state = $row['state'];
 $image = $row['image'];
 $genre = $row['genre'];
+$FORSEARCH = $row['genre'];
 $band_members = $row['members'];
 }
 echo "<br><br><img src =\"$image\" style = \"width: 350px; height: 275 px;\"/><br/>";
@@ -49,6 +51,19 @@ echo "<li>$name</li>";
 }
 echo "</ul>";
 
+echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Related Bands: </b></font></font></P>";
+echo "<u1>";
+$query = "SELECT name FROM bandinfo WHERE genre LIKE '%$FORSEARCH%' AND name != '$BANDNAME';";
+
+$result = mysqli_query($db, $query)
+or die("Error Querying Database");
+
+while($row = mysqli_fetch_array($result)) {
+$name = $row['name'];
+echo "<li>$name</li>";
+}
+echo "</u1>";
+
 echo "<P ALIGN = 'left'><font size = '5'><b><font color = 'blue'>Upcoming Events: </b></font></font>";
 
 $query = "SELECT e.event_id, e.name, e.date FROM events AS e INNER JOIN bandinfo AS b ON e.band_id1 = b.band_id WHERE b.band_id = $band;";
@@ -65,7 +80,8 @@ while($row = mysqli_fetch_array($result))
 }
 
 include "comments.php";
-echo "<a href='index.php?page=band_editing.php&id=$id'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
+
+echo "<a href='index.php?page=band_editing.php&id=$band'><font color = 'green'><h2><b>>>Edit this Band<<</b></h2></font></a>";
 
 ?>
 

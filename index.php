@@ -57,8 +57,8 @@ function buildnav($number,$link) {
 	<?php
 	echo(buildnav(1, "index.php"));
 	echo(buildnav(2, "index.php?page=band_list.php"));
-	echo(buildnav(3, "index.php?page=band_entry.html"));
-	echo(buildnav(4, "index.php?page=venue_entry.html"));
+	echo(buildnav(3, "index.php?page=band_entry.php"));
+	echo(buildnav(4, "index.php?page=venue_entry.php"));
 	echo(buildnav(5, "index.php?page=event_entry.php"));
 	echo '<a href = "index.php?page=venue_list.php">Venues</a>';
 	echo '<a href = "index.php?page=event_list.php">Events</a>';
