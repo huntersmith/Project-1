@@ -20,7 +20,15 @@ or die("Error Querying Database");
 
 echo "The venue has been deleted.";
 
+$query = "DELETE FROM events
+WHERE
+venue_id='$venue_id';";
+
+$result = mysqli_query($db, $query)
+or die("Error Querying Database");
+
+echo "</br>The events held in this venue have been deleted.";
+
 ?>
-<br />
 </td></tr>
 </table>
