@@ -9,7 +9,7 @@
 
 <?php   
 
-$query = "SELECT name, image, band_id FROM $table";
+$query = "SELECT name, image, band_id FROM $table ORDER BY name";
   
   $result = mysqli_query($db, $query)
    or die("Error 1 Querying Database");
