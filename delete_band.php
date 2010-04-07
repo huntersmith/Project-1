@@ -9,7 +9,7 @@ include("mustlogin.php");
 
 <?php
 include "db_connect.php"; 
-$band_id = $_POST['band_id'];
+$band_id = $_GET['id'];
 
 $query = "DELETE FROM bandinfo
 WHERE
@@ -24,7 +24,7 @@ $query = "DELETE FROM records
 WHERE
 band_id='$band_id';";
 
-$result = mysql0_query($db, $query)
+$result = mysqli_query($db, $query)
 or die("Error Querying Database");
 
 echo "The records created by the band have been deleted.";
