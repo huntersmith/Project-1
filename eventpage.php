@@ -59,6 +59,7 @@ $name1 = $row['name'];
 
 echo "Band: ";
 echo "<a href = index.php?page=bandpage.php&id=$band1>$name1</a><br/>";
+echo "<a href='index.php?page=delete_event.php&id=$id'><font color = 'green'><h2><b>>>Delete this Event<<</b></h2></font></a>";
 /*
 $query = "SELECT bandinfo.name
 FROM bandinfo
@@ -95,7 +96,6 @@ if($band3 != 0)
 	echo "Band 3: ";
 	echo "<a href = index.php?page=bandpage.php&id=$band3>$name3</a><br/>";
 }
-
 */
 ?>
 
