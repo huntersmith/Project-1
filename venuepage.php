@@ -50,8 +50,10 @@ while($row = mysqli_fetch_array($result))
 }
 
 
-echo"<a href='$map'>Need a map?</a>
+echo"<a href='$map'>Need a map?</a></br>
 		<a href='index.php?page=venue_editing.php&id=$venue_id'>Edit this Venue</a>
+		</br>
+		<a href='index.php?page=delete_venue.php&id=$venue_id'>Delete this Venue</a>
 		";
     }
 

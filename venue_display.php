@@ -35,7 +35,10 @@ while($row = mysqli_fetch_array($result)) {
 		<p>Location: <br/>$street_address <br/> $city, $state </p>
 		<p> $about </p>
 		<a href='$map'>Need a map?</a>
+		</br>
 		<a href='venue_editing.php?id=$venue_id'>Edit this Venue</a>
+		</br>
+		<a href='delete_venue.php?id=$venue_id'>Delete this Venue</a>
 		";
     }
     }

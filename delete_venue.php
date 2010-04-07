@@ -9,25 +9,17 @@ include("mustlogin.php");
 
 <?php
 include "db_connect.php"; 
-$venue_id = $_POST['venue_id'];
+$venue_id = $_GET['id'];
 
-$query = "DELETE FROM bandinfo
+$query = "DELETE FROM venues
 WHERE
 venue_id='$venue_id';";
 
 $result = mysqli_query($db, $query)
 or die("Error Querying Database");
 
-echo "The band has been deleted.";
+echo "The venue has been deleted.";
 
-$query = "DELETE FROM records
-WHERE
-venue_id='$venue_id';";
-
-$result = mysql0_query($db, $query)
-or die("Error Querying Database");
-
-echo "The records created by the band have been deleted.";
 ?>
 <br />
 </td></tr>
