@@ -8,7 +8,7 @@
 
 <?php   
 
-$query = "SELECT name, image, venue_id FROM venues";
+$query = "SELECT name, image, venue_id FROM venues ORDER BY name";
   
   $result = mysqli_query($db, $query)
    or die("Error 1 Querying Database");

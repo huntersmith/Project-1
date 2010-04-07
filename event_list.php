@@ -8,7 +8,7 @@
 
 <?php   
 
-$query = "SELECT name, date, time, event_id FROM events";
+$query = "SELECT name, date, time, event_id FROM events ORDER BY date";
   
   $result = mysqli_query($db, $query)
    or die("Error 1 Querying Database");
