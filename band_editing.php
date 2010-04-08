@@ -14,15 +14,26 @@ include("mustlogin.php");
                 	$result = mysqli_query($db, $query)
 				or die("Error querying database.");
 			while($row = mysqli_fetch_array($result)) {
-				$name = $row['name']; 
-				$street_address = $row['street_address'];
-				$city = $row['city'];
-				$state = $row['state'];
-				$image = $row['image'];
-				$genre = $row['genre'];
-				$members = $row['members'];
+				$name = htmlentities($row['name']); 
+				$street_address = htmlentities($row['street_address']);
+				$city = htmlentities($row['city']);
+				$state = htmlentities($row['state']);
+				$image = htmlentities($row['image']);
+				$genre = htmlentities($row['genre']);
+				$members = htmlentities($row['members']);
+				$about = htmlentities($row['about']);
 			}
         	?>
+			
+		<?php
+			if (isset($_GET['errors']) && is_array($_GET['errors']))
+			{
+				foreach($_GET['errors'] as $error)
+				{
+					echo '<div>'.htmlentities($error).'</div>';
+				}
+			}
+			?>
 
 		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_band.php">
     		
@@ -48,6 +59,9 @@ include("mustlogin.php");
 
     		<label for="image">Select a Picture file:</label>
     		<input type="file" id="image" name="image" value="<?php echo $image ?>" /><br/>
+			
+			<label for="about">About Your Band:</label>
+    		<textarea id="about" name="about"><?php echo $about ?></textarea><br/>
 
 
     		<input type="submit" value="Save Changes" name="submit"/>
