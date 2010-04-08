@@ -53,16 +53,20 @@ function buildnav($number,$link) {
 <table border="1" bordercolor="white" cellpadding="0" cellspacing="0">
 <tr><td>
 	<table border="0" cellpadding="0" cellspacing="0" width="100%">
-	<tr">
+	<tr>
 	<?php
 	echo(buildnav(1, "index.php"));
 	echo(buildnav(2, "index.php?page=band_list.php"));
 	echo(buildnav(3, "index.php?page=band_entry.php"));
 	echo(buildnav(4, "index.php?page=venue_entry.php"));
 	echo(buildnav(5, "index.php?page=event_entry.php"));
-	echo '<a href = "index.php?page=venue_list.php">Venues</a>';
-	echo '<a href = "index.php?page=event_list.php">Events</a>';
-
+	?>
+	</tr>
+	<tr>
+	<?php
+	echo(buildnav(6, "index.php?page=venue_list.php"));
+	echo(buildnav(7, "index.php?page=event_list.php"));
+	echo("<td colspan=\"3\" background=\"navbg.jpg\"></td>");
 	?>
 	</tr>
 	</table>
