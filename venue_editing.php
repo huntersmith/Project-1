@@ -24,6 +24,16 @@ include("mustlogin.php");
                                 $about = $row['about'];
                         }
                 ?>
+				
+		<?php
+			if (isset($_GET['errors']) && is_array($_GET['errors']))
+			{
+				foreach($_GET['errors'] as $error)
+				{
+					echo '<div>'.htmlentities($error).'</div>';
+				}
+			}
+			?>
 
 		<form enctype="multipart/form-data" method="post" action="index.php?page=edit_venue.php">
     		<label for="name">Venue name:</label>

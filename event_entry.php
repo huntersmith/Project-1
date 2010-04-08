@@ -1,6 +1,7 @@
 <?php
 include("mustlogin.php");
 ?>
+
 <script type="text/javascript" src="datepickercontrol.js"></script>
 <link type="text/css" rel="stylesheet" href="datepickercontrol.css">
 
@@ -11,6 +12,16 @@ include("mustlogin.php");
 <tr bgcolor="white"><td align="center">
 
 <div id="contents">
+
+		<?php
+			if (isset($_GET['errors']) && is_array($_GET['errors']))
+			{
+				foreach($_GET['errors'] as $error)
+				{
+					echo '<div>'.htmlentities($error).'</div>';
+				}
+			}
+			?>
 
     <form enctype="multipart/form-data" method="post" action="index.php?page=test_event.php">
     <label for="name">Event name:</label>
